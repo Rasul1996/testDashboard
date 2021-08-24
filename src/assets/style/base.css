@@ -1,0 +1,10 @@
+* {
+    font-family: 'inter', courier,arial,helvetica !important;
+}
+
+.box {
+    border-radius: 8px;
+    background-color: var(--secondary);
+    padding: 20px;
+    color: var(--white);
+}
