@@ -2,6 +2,10 @@
     font-family: 'inter', courier,arial,helvetica !important;
 }
 
+body {
+    background-color: var(--primary);
+}
+
 .box {
     border-radius: 8px;
     background-color: var(--secondary);
