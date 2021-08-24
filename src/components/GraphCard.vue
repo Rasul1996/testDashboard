@@ -66,13 +66,15 @@ export default {
 
   methods: {
     setupChart() {
+      Chart.defaults.global.legend.display = false;
       new Chart(document.getElementById(`pie-chart${this.id}`), {
         type: "pie",
         data: {
+          labels: [this.firstKey, this.secondKey],
           datasets: [
             {
               backgroundColor: [this.firstColor, this.secondColor],
-              data: [37, 63],
+              data: [this.firstValue, this.secondValue],
             },
           ],
         },
