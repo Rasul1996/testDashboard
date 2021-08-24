@@ -73,7 +73,6 @@ export default {
 
 <style lang="scss" scoped>
 .base-header {
-  padding: 36px;
   display: flex;
   align-items: center;
   justify-content: space-between;

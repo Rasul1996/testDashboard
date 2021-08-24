@@ -7,3 +7,13 @@
     font-family: 'inter-bold';
     src: url('../fonts/Inter-Bold.ttf') format('truetype')
 }
+
+@font-face {
+    font-family: 'open-sans';
+    src: url('../fonts/OpenSans-Regular.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'open-sans-bold';
+    src: url('../fonts/OpenSans-Bold.ttf') format('truetype')
+}
