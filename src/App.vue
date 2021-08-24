@@ -3,8 +3,8 @@
     <BaseHeader />
     <div class="boxes">
       <FirstSide class="first-side" />
-      <div>s</div>
-      <div>s</div>
+      <SecondSide class="second-side" />
+      <ThirdSide class="third-side" />
     </div>
   </div>
 </template>
@@ -12,12 +12,16 @@
 <script>
 import BaseHeader from "@/components/BaseHeader.vue";
 import FirstSide from "./First.vue";
+import SecondSide from "./Second.vue";
+import ThirdSide from "./Third.vue";
 
 export default {
   name: "App",
   components: {
     BaseHeader,
     FirstSide,
+    SecondSide,
+    ThirdSide,
   },
 };
 </script>
@@ -26,9 +30,18 @@ export default {
 .boxes {
   margin-top: 1em;
   display: flex;
+  justify-content: space-between;
 
   .first-side {
-    width: 30%;
+    width: 22%;
+  }
+
+  .second-side {
+    width: 38%;
+  }
+
+  .third-side {
+    width: 38%;
   }
 }
 </style>

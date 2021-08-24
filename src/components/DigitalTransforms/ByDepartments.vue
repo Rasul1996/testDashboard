@@ -87,9 +87,11 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 6px;
 
   .single-card {
-    width: 31%;
+    flex-grow: 1;
+    width: 30%;
   }
 }
 

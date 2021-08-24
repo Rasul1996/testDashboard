@@ -45,7 +45,7 @@ export default {
 
   .single-box-card {
     flex-grow: 1;
-    width: 45%;
+    width: 40%;
   }
 }
 </style>

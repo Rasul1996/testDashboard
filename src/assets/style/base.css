@@ -28,3 +28,15 @@ body {
 .bold {
     font-family: 'inter-bold' !important;
 }
+
+.flex {
+    display: flex;
+}
+
+.gap {
+    gap: 5px;
+}
+
+.mt-1 {
+    margin-top: 5px;
+}
