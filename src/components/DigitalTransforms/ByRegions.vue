@@ -1,27 +1,27 @@
 <template>
   <div class="box">
     <div class="box-info">
-      <h3 class="box-title">Общее количество по территориям</h3>
+      <h3 class="box-title">{{ $t("totalByTerritories") }}</h3>
       <span class="bold">1641</span>
     </div>
     <div class="info-cards" style="margin-top: 1.2em">
       <InfoCard
         class="single-card"
-        title="Реализовано"
+        :title="$t('implemented')"
         info="783"
         icon="check.svg"
         color="rgba(39, 174, 96, 0.75)"
       />
       <InfoCard
         class="single-card"
-        title="В процессе"
+        :title="$t('during')"
         info="112"
         icon="Warning.svg"
         color="rgba(242, 153, 74, 0.75)"
       />
       <InfoCard
         class="single-card"
-        title="Не начато"
+        :title="$t('notStarted')"
         info="526"
         icon="Time.svg"
         color="rgba(235, 87, 87, 0.75)"

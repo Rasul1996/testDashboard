@@ -1,6 +1,7 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import store from "./store";
+import { i18n } from "./lang/index.js";
 
 import "./assets/style/index.css";
 
@@ -14,4 +15,4 @@ app.config.globalProperties.$formatNumber = (number) => {
   }
 };
 
-app.use(store).mount("#app");
+app.use(store).use(i18n).mount("#app");
