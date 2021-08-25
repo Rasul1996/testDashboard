@@ -41,9 +41,9 @@ export default {};
   }
 
   .sample-logo {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 </style>

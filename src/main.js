@@ -7,7 +7,11 @@ import "./assets/style/index.css";
 const app = createApp(App);
 
 app.config.globalProperties.$formatNumber = (number) => {
-  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  if (number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  } else {
+    return 0;
+  }
 };
 
 app.use(store).mount("#app");

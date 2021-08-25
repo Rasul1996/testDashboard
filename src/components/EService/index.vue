@@ -29,18 +29,18 @@
   </div>
   <div class="flex mt-1" style="gap: 4px">
     <ContentCard
-      :backgroundColor="'var(--info)'"
-      title="Жорий этилган хизматлар сони"
       :value="321"
+      color="rgba(89, 153, 241, 0.5)"
+      title="Количество внедренных услуг"
     />
     <ContentCard
-      title="Янги хизматлар сони"
-      :backgroundColor="'#52BE80'"
+      title="Количество новых услуг"
+      color="rgba(82, 190, 128, 0.5)"
       :value="3"
     />
     <ContentCard
-      :backgroundColor="'#AF74E6'"
-      title="ЯИДХП мобиль хизматлар сони"
+      color="rgba(175, 116, 230, 0.5  )"
+      title="Количество мобильных услуг ЕПИГУ"
       :value="314"
     />
   </div>

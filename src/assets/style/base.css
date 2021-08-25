@@ -1,5 +1,6 @@
 * {
     font-family: 'inter', courier,arial,helvetica !important;
+    box-sizing: border-box;
 }
 
 body {
