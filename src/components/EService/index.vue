@@ -27,17 +27,33 @@
       style="width: 50%"
     />
   </div>
+  <div class="flex mt-1" style="gap: 4px">
+    <ContentCard
+      :backgroundColor="'var(--info)'"
+      title="Жорий этилган хизматлар сони"
+      :value="321"
+    />
+    <ContentCard
+      title="Янги хизматлар сони"
+      :backgroundColor="'#52BE80'"
+      :value="3"
+    />
+    <ContentCard
+      :backgroundColor="'#AF74E6'"
+      title="ЯИДХП мобиль хизматлар сони"
+      :value="314"
+    />
+  </div>
 </template>
 
 <script>
 import GraphCard from "../GraphCard.vue";
-import ContentCard from "../ContentCard.vue"
+import ContentCard from "../ContentCard.vue";
 
 export default {
   components: {
     GraphCard,
-    ContentCard
+    ContentCard,
   },
 };
 </script>
-

@@ -1,23 +1,28 @@
 <template>
-  <div class="box content-box">
-      <div class="content-title">{{ title }}</div>
-      <div class="content-value">{{ $formatNumber(value) }}</div>
-    </div>
+  <div class="box content-box" :style="{ background: backgroundColor }">
+    <div class="content-title">{{ title }}</div>
+    <div class="content-value">{{ $formatNumber(value) }}</div>
+  </div>
 </template>
 
 <script>
 export default {
-    props: {
-        title: {
-            type: String,
-            required: true
-        },
-        value: {
-            type: Number,
-            required: true
-        }
-    }
-}
+  props: {
+    backgroundColor: {
+      type: String,
+      required: false,
+      default: "var(--secondary)"
+    },
+    title: {
+      type: String,
+      required: true,
+    },
+    value: {
+      type: Number,
+      required: true,
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -25,6 +30,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
+
 
   .content-title {
     width: 50%;
