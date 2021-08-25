@@ -1,7 +1,8 @@
 <template>
-  <div class="box content-box" :style="{ background: color }">
-    <div class="content-title">{{ title }}</div>
-    <div class="content-value">{{ $formatNumber(value) }}</div>
+  <div class="box data-box" :style="{ background: color }">
+    <div class="data-title">{{ title }}</div>
+    <img class="data-img" :src="require(`@/assets/images/${logo}`)" alt="" />
+    <div class="data-value">{{ $formatNumber(value) }}</div>
   </div>
 </template>
 
@@ -21,24 +22,32 @@ export default {
       type: Number,
       required: true,
     },
+    logo: {
+      type: String,
+      required: true,
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.content-box {
-  width: 100%;
+.data-box {
   display: flex;
   align-items: center;
+  padding: 14px 20px !important;
+  justify-content: space-between;
 
-  .content-title {
-    width: 50%;
+  .data-title {
     font-size: 1.2rem;
     font-family: "inter" !important;
   }
 
-  .content-value {
-    width: 50%;
+  .data-img {
+    margin-right: 20px;
+  }
+
+  .data-value {
+    white-space: nowrap;
     font-size: 3rem;
     color: var(--white);
     font-family: "inter-bold" !important;

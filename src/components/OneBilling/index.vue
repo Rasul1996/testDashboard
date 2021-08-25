@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import BoxCard from "./BoxCard.vue";
+import BoxCard from "../BoxCard.vue";
 export default {
   components: {
     BoxCard,

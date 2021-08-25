@@ -27,17 +27,33 @@
       style="width: 50%"
     />
   </div>
+  <div class="flex mt-1" style="gap: 4px">
+    <ContentCard
+      :value="321"
+      color="rgba(89, 153, 241, 0.5)"
+      title="Количество внедренных услуг"
+    />
+    <ContentCard
+      title="Количество новых услуг"
+      color="rgba(82, 190, 128, 0.5)"
+      :value="3"
+    />
+    <ContentCard
+      color="rgba(175, 116, 230, 0.5  )"
+      title="Количество мобильных услуг ЕПИГУ"
+      :value="314"
+    />
+  </div>
 </template>
 
 <script>
 import GraphCard from "../GraphCard.vue";
-import ContentCard from "../ContentCard.vue"
+import ContentCard from "../ContentCard.vue";
 
 export default {
   components: {
     GraphCard,
-    ContentCard
+    ContentCard,
   },
 };
 </script>
-

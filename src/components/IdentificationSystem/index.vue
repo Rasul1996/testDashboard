@@ -26,13 +26,13 @@
 <script>
 import ContentCard from "../ContentCard.vue";
 import GraphCard from "../GraphCard.vue";
-import SampleCard from "./SampleCard.vue"
+import SampleCard from "./SampleCard.vue";
 
 export default {
   components: {
     ContentCard,
     GraphCard,
     SampleCard,
-  }
-}
+  },
+};
 </script>
