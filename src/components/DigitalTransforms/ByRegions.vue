@@ -1,7 +1,7 @@
 <template>
   <div class="box">
     <div class="box-info">
-      <h3 class="box-title">Общее количество по территориям</h3>
+      <h3 class="box-title">{{ "totalByTerritories" }}</h3>
       <span class="bold">1641</span>
     </div>
     <div class="info-cards" style="margin-top: 1.2em">

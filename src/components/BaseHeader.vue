@@ -2,7 +2,7 @@
   <header class="base-header">
     <div class="header-logo">
       <img src="@/assets/images/logo.svg" alt="" />
-      <span>Центр управления проектами электронного правительства</span>
+      <span>{{ $t("EGovernmentCenter") }}</span>
     </div>
     <div class="header-date">
       <div class="date-time">{{ time }}</div>
