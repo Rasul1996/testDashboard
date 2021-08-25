@@ -3,7 +3,7 @@ import uz from "./uz.json";
 import ru from "./ru.json";
 const messages = {
   uz,
-  ru
+  ru,
 };
 
 export const i18n = createI18n({
