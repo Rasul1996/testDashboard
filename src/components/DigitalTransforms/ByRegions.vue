@@ -28,34 +28,82 @@
       />
     </div>
     <div class="sub-info-cards">
-      <SubInfoCard
-        class="single-sub-card"
-        :index="1"
-        title="Ташкентсткая область"
-        :info="21331"
-        color="rgba(82, 190, 128, 0.5)"
-      />
-      <SubInfoCard
-        class="single-sub-card"
-        :index="2"
-        title="Бухарская область"
-        :info="52342"
-        color="rgba(82, 190, 128, 0.25)"
-      />
-      <SubInfoCard
-        class="single-sub-card"
-        :index="3"
-        title="Ташкентсткая область"
-        :info="4421"
-        color="rgba(239, 121, 121, 0.25)"
-      />
-      <SubInfoCard
-        class="single-sub-card"
-        :index="4"
-        title="Бухарская область"
-        :info="3231"
-        color="rgba(239, 121, 121, 0.5)"
-      />
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <SubInfoCard
+              class="single-sub-card"
+              :index="1"
+              title="Ташкентсткая область"
+              :info="21331"
+              color="rgba(82, 190, 128, 0.5)"
+            />
+          </div>
+          <div class="swiper-slide">
+            <SubInfoCard
+              class="single-sub-card"
+              :index="2"
+              title="Бухарская область"
+              :info="52342"
+              color="rgba(82, 190, 128, 0.25)"
+            />
+          </div>
+          <div class="swiper-slide">
+            <SubInfoCard
+              class="single-sub-card"
+              :index="3"
+              title="Ташкентсткая область"
+              :info="4421"
+              color="rgba(239, 121, 121, 0.25)"
+            />
+          </div>
+          <div class="swiper-slide">
+            <SubInfoCard
+              class="single-sub-card"
+              :index="4"
+              title="Бухарская область"
+              :info="3231"
+              color="rgba(239, 121, 121, 0.5)"
+            />
+          </div>
+          <div class="swiper-slide">
+            <SubInfoCard
+              class="single-sub-card"
+              :index="1"
+              title="Ташкентсткая область"
+              :info="21331"
+              color="rgba(82, 190, 128, 0.5)"
+            />
+          </div>
+          <div class="swiper-slide">
+            <SubInfoCard
+              class="single-sub-card"
+              :index="2"
+              title="Бухарская область"
+              :info="52342"
+              color="rgba(82, 190, 128, 0.25)"
+            />
+          </div>
+          <div class="swiper-slide">
+            <SubInfoCard
+              class="single-sub-card"
+              :index="3"
+              title="Ташкентсткая область"
+              :info="4421"
+              color="rgba(239, 121, 121, 0.25)"
+            />
+          </div>
+          <div class="swiper-slide">
+            <SubInfoCard
+              class="single-sub-card"
+              :index="4"
+              title="Бухарская область"
+              :info="3231"
+              color="rgba(239, 121, 121, 0.5)"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -63,14 +111,49 @@
 <script>
 import InfoCard from "@/components/InfoCard.vue";
 import SubInfoCard from "@/components/SubInfoCard.vue";
-
+/* eslint-disable no-undef */
 export default {
   components: {
     InfoCard,
     SubInfoCard,
   },
+  mounted() {
+    // eslint-disable-next-line no-unused-vars
+    const swiper = new Swiper(".swiper", {
+      slidesPerView: 4,
+      // Optional parameters
+      direction: "vertical",
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+
+      // If we need pagination
+      pagination: {
+        el: ".swiper-pagination",
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+    });
+  },
 };
 </script>
+
+<style scoped>
+.swiper {
+  height: 210px;
+}
+</style>
 
 <style lang="scss" scoped>
 .box-info {
