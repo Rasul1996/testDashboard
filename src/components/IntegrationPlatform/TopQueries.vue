@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <div class="box-title">Топ-5 получателя запросов</div>
+    <div class="box-title">{{ $t("top5Recipients") }}</div>
     <ul class="top-info">
       <li class="info-item" v-for="(item, index) of items" :key="item.id">
         <div class="info-key">

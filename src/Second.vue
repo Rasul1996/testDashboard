@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="box">
-      <div class="box-title"> {{ $t('EGovernmentServices') }}</div>
+      <div class="box-title">{{ $t("EGovernmentServices") }}</div>
     </div>
 
     <div class="mt-1">
@@ -13,7 +13,7 @@
     </div>
 
     <div class="box mt-1">
-      <div class="box-title">{{ $t('EGovernmentProject') }} </div>
+      <div class="box-title">{{ $t("EGovernmentProject") }}</div>
     </div>
 
     <div class="flex mt-1">
@@ -34,7 +34,7 @@
 
     <div class="box mt-1">
       <div style="font-size: 20px">
-        {{ $t('unifiedRegisterEG') }}
+        {{ $t("unifiedRegisterEG") }}
       </div>
       <div class="info-cards">
         <InfoCard
@@ -81,43 +81,43 @@ export default {
       items: [
         {
           id: 1,
-          key: "Андижанская",
+          key: this.$i18n.t("andijan"),
           value: 1321,
           percent: 78,
         },
         {
           id: 2,
-          key: "Бухарская",
+          key: this.$i18n.t("bukhara"),
           value: 4432,
           percent: 67,
         },
         {
           id: 3,
-          key: "Джизакская",
+          key: this.$i18n.t("jizzakh"),
           value: 655,
           percent: 56,
         },
         {
           id: 4,
-          key: "Кашкадарьинская",
+          key: this.$i18n.t("kashkadarya"),
           value: 1321,
           percent: 39,
         },
         {
           id: 5,
-          key: "Навоийская",
+          key: this.$i18n.t('navoiy'),
           value: 4431,
           percent: 29,
         },
         {
           id: 6,
-          key: "Наманганская",
+          key: this.$i18n.t('namangan'),
           value: 6535,
           percent: 35,
         },
         {
           id: 7,
-          key: "Самаркандская",
+          key: this.$i18n.t('samarkand'),
           value: 655,
           percent: 32,
         },
