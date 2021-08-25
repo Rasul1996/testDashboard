@@ -34,7 +34,7 @@
             <SubInfoCard
               class="single-sub-card"
               :index="1"
-              title="Ташкентсткая область"
+              :title="$t('tashkentRegion')"
               :info="21331"
               color="rgba(82, 190, 128, 0.5)"
             />
@@ -43,7 +43,7 @@
             <SubInfoCard
               class="single-sub-card"
               :index="2"
-              title="Бухарская область"
+              :title="$t('bukharaRegion')"
               :info="52342"
               color="rgba(82, 190, 128, 0.25)"
             />
@@ -52,7 +52,7 @@
             <SubInfoCard
               class="single-sub-card"
               :index="3"
-              title="Ташкентсткая область"
+              :title="$t('tashkentRegion')"
               :info="4421"
               color="rgba(239, 121, 121, 0.25)"
             />
@@ -61,7 +61,7 @@
             <SubInfoCard
               class="single-sub-card"
               :index="4"
-              title="Бухарская область"
+              :title="$t('bukharaRegion')"
               :info="3231"
               color="rgba(239, 121, 121, 0.5)"
             />
@@ -70,7 +70,7 @@
             <SubInfoCard
               class="single-sub-card"
               :index="1"
-              title="Ташкентсткая область"
+              :title="$t('tashkentRegion')"
               :info="21331"
               color="rgba(82, 190, 128, 0.5)"
             />
@@ -79,7 +79,7 @@
             <SubInfoCard
               class="single-sub-card"
               :index="2"
-              title="Бухарская область"
+              :title="$t('bukharaRegion')"
               :info="52342"
               color="rgba(82, 190, 128, 0.25)"
             />
@@ -88,7 +88,7 @@
             <SubInfoCard
               class="single-sub-card"
               :index="3"
-              title="Ташкентсткая область"
+              :title="$t('tashkentRegion')"
               :info="4421"
               color="rgba(239, 121, 121, 0.25)"
             />
@@ -97,7 +97,7 @@
             <SubInfoCard
               class="single-sub-card"
               :index="4"
-              title="Бухарская область"
+              :title="$t('bukharaRegion')"
               :info="3231"
               color="rgba(239, 121, 121, 0.5)"
             />

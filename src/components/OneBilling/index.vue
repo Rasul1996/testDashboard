@@ -11,12 +11,12 @@
     />
     <BoxCard
       class="single-box-card"
-      :title="$t('totalAmountTransactions')"
+      :title="$t('numberTransactionsToday')"
       :value="4212314"
     />
     <BoxCard
       class="single-box-card"
-      :title="$t('numberTransactionsToday')"
+      :title="$t('totalAmountTransactions')"
       :value="54314"
     />
     <BoxCard
