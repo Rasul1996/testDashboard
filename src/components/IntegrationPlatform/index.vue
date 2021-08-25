@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="box">
-      <div class="box-title">
+      <h3 class="box-title">
         {{ $t("interdepartmentalIntegrationPlatform") }}
-      </div>
+      </h3>
     </div>
 
     <div class="flex mt-1">

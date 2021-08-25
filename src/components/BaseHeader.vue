@@ -76,28 +76,34 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 
   .header-logo {
     display: flex;
     align-items: center;
-    img {
-      width: 164px;
-      height: 118px;
-    }
+    max-width: 30%;
+    background-color: red;
     span {
       font-family: "inter-bold" !important;
       font-size: 26px;
-      width: 333px;
+      height: auto;
       color: var(--white);
       margin-left: 20px;
     }
   }
 
   .header-date {
+    color: var(--white);
+    font-size: var(--header-text-size);
+    text-align: center;
+    white-space: nowrap;
     display: flex;
     align-items: center;
-    color: var(--white);
-    font-size: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
 
     .date-seperator {
       width: 40px;
@@ -108,6 +114,10 @@ export default {
   }
 
   .header-target {
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 </style>

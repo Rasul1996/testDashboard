@@ -1,8 +1,8 @@
 <template>
   <div class="box">
-    <div class="box-title" style="font-size: 20px">
+    <h3 class="box-title" style="font-size: 20px">
       {{ $t('numberStatementsRegion') }}
-    </div>
+    </h3>
     <ul class="data-table">
       <li class="data-item" v-for="item of items" :key="item.id">
         <span style="width: 20%">{{ item.key }}</span>

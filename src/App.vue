@@ -1,6 +1,6 @@
 <template>
   <div style="padding: 36px">
-    <BaseHeader />
+    <BaseHeader v-if="false" />
     <div class="boxes">
       <FirstSide class="first-side" />
       <SecondSide class="second-side" />
@@ -8,7 +8,6 @@
     </div>
   </div>
 </template>
-
 <script>
 import BaseHeader from "@/components/BaseHeader.vue";
 import FirstSide from "./First.vue";
