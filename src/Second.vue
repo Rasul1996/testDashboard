@@ -34,7 +34,7 @@
 
     <div class="box mt-1">
       <div style="font-size: 20px">
-        {{ $t("unifiedRegisterEG") }}
+        {{ $t("unified") }}
       </div>
       <div class="info-cards">
         <InfoCard

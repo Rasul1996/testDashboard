@@ -1,16 +1,13 @@
 import { createI18n } from "vue-i18n";
-import Uz from './uz.json'
+import uz from "./uz.json";
+import ru from "./ru.json";
 const messages = {
-  Uz,
-  Ru: {
-    hello: "こんにちは、世界",
-  },
+  uz,
+  ru
 };
 
 export const i18n = createI18n({
-  locale: "Uz", // set locale
-  fallbackLocale: "Ru", // set fallback locale
-  messages, // set locale messages
-  // If you need to specify other options, you can set other options
-  // ...
+  locale: "uz",
+  fallbackLocale: "ru",
+  messages,
 });
