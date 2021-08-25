@@ -4,7 +4,7 @@
     <div class="boxes">
       <FirstSide class="first-side" />
       <SecondSide class="second-side" />
-      <ThirdSide class="third-side" />
+      <ThirdSide class="third-side" />s
     </div>
   </div>
 </template>
