@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="box">
-      <h3 class="box-title">{{ $t("EGovernmentServices") }}</h3>
+      <h3 class="box-title">{{ $t("oneId") }}</h3>
     </div>
 
     <div class="mt-1">
@@ -10,7 +10,7 @@
     <div class="mt-1">
       <DataTable :items="items" />
     </div>
-    <div class="mt-1">
+    <div style="margin-top: 35px">
       <IntegrationPlatform />
     </div>
   </div>
@@ -56,31 +56,31 @@ export default {
         },
         {
           id: 5,
-          key: this.$i18n.t('navoiy'),
+          key: this.$i18n.t("navoiy"),
           value: 4431,
           percent: 29,
         },
         {
           id: 6,
-          key: this.$i18n.t('namangan'),
+          key: this.$i18n.t("namangan"),
           value: 6535,
           percent: 35,
         },
         {
           id: 7,
-          key: this.$i18n.t('samarkand'),
+          key: this.$i18n.t("samarkand"),
           value: 655,
           percent: 31,
         },
         {
           id: 8,
-          key: this.$i18n.t('surkhandarya'),
+          key: this.$i18n.t("surkhandarya"),
           value: 315,
           percent: 28,
         },
         {
           id: 9,
-          key: this.$i18n.t('sirdarya'),
+          key: this.$i18n.t("sirdarya"),
           value: 255,
           percent: 25,
         },

@@ -1,15 +1,68 @@
-.fs-1 {
-    font-size: 18px;
-}
-
-.fs-2 {
-    font-size: 20px;
-}
-
-.fs-3 {
+.box-title {
     font-size: 24px;
+    font-family: 'inter-bold' !important;
 }
 
-.fs-4 {
-    font-size: 48px;
+@media (max-width: 2500px) {
+    .box-title {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 2000px) {
+    .box-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1800px) {
+    .box-title {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .box-title {
+        font-size: 17px;
+    }
+}
+
+.ff-bold {
+    font-family: 'inter-bold' !important;
+}
+
+.ff-medium {
+    font-family: 'inter-medium' !important;
+}
+
+.ff-open-sans {
+    font-family: 'open-sans' !important;
+}
+
+.ff-open-sans-bold {
+    font-family: 'open-sans-bold' !important;
+}
+
+.mt-1 {
+    margin-top: 4px;
+}
+
+.mt-2 {
+    margin-top: 16px;
+}
+
+.ml-3 {
+    margin-left: 36px;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-33 {
+    width: 33%;
 }

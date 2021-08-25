@@ -38,7 +38,7 @@ export default {
 
 <style lang="scss" scoped>
 .box-cards {
-  margin-top: 10px;
+  margin-top: 4px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;

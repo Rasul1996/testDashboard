@@ -2,12 +2,12 @@
   <div class="box sample-box">
     <div class="sample-info">
       <p class="sample-key">
-        {{ $t('numberIdPersonalAccount') }}
+        {{ $t("numberIdPersonalAccount") }}
       </p>
       <p class="sample-value">413 244</p>
     </div>
     <div class="sample-logo">
-      <img src="@/assets/images/OneID.svg" alt="" />
+      <img style="width: 100%" src="@/assets/images/OneID.svg" alt="" />
     </div>
   </div>
 </template>

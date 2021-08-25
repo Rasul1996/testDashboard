@@ -1,8 +1,8 @@
 <template>
   <div class="box data-box" :style="{ background: color }">
-    <div class="data-title">{{ title }}</div>
+    <div class="ff-medium data-title">{{ title }}</div>
     <img class="data-img" :src="require(`@/assets/images/${logo}`)" alt="" />
-    <div class="data-value">{{ $formatNumber(value) }}</div>
+    <div class="ff-bold data-value">{{ $formatNumber(value) }}</div>
   </div>
 </template>
 
@@ -38,20 +38,49 @@ export default {
   justify-content: space-between;
 
   .data-title {
-    font-size: 1.2rem;
-    font-family: "inter" !important;
+    font-size: 20px;
   }
 
   .data-img {
-    margin-right: 20px;
+    margin: 0 10px;
   }
 
   .data-value {
     white-space: nowrap;
-    font-size: 3rem;
-    color: var(--white);
-    font-family: "inter-bold" !important;
+    font-size: 48px;
     text-align: end;
+  }
+
+  @media (max-width: 2500px) {
+    .data-title {
+      font-size: 19px;
+    }
+
+    .data-value {
+      font-size: 36px;
+    }
+  }
+  @media (max-width: 2000px) {
+    flex-wrap: wrap !important;
+    .data-img {
+      margin: 0;
+    }
+    .data-title {
+      font-size: 18px;
+    }
+
+    .data-value {
+      font-size: 28px;
+    }
+  }
+  @media (max-width: 1500px) {
+    .data-title {
+      font-size: 16px;
+    }
+
+    .data-value {
+      font-size: 22px;
+    }
   }
 }
 </style>

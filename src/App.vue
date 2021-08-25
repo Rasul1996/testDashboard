@@ -1,6 +1,6 @@
 <template>
   <div style="padding: 36px">
-    <BaseHeader v-if="false" />
+    <BaseHeader />
     <div class="boxes">
       <FirstSide class="first-side" />
       <SecondSide class="second-side" />

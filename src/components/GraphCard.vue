@@ -87,28 +87,78 @@ export default {
 <style lang="scss" scoped>
 .graph-card {
   display: flex;
+  max-width: 100%;
   .lhs {
     width: 50%;
     .title {
-      font-size: 1.25rem;
+      font-size: 20px;
       color: var(--white);
       font-family: "inter-bold" !important;
     }
 
     .info-key {
-      font-size: 1.125rem;
+      font-size: 18px;
       color: var(--white);
       font-family: "open-sans-bold" !important;
     }
 
     .info-value {
-      font-size: 3rem;
+      font-size: 48px;
       font-family: "open-sans-bold" !important;
+    }
+
+    @media (max-width: 2500px) {
+      .title {
+        font-size: 19px;
+      }
+
+      .info-key {
+        font-size: 17px;
+      }
+
+      .info-value {
+        font-size: 36px;
+      }
+    }
+    @media (max-width: 2000px) {
+      .title {
+        font-size: 18px;
+      }
+
+      .info-key {
+        font-size: 16px;
+      }
+
+      .info-value {
+        font-size: 28px;
+      }
+    }
+    @media (max-width: 1500px) {
+      .title {
+        font-size: 16px;
+      }
+
+      .info-key {
+        font-size: 15px;
+      }
+
+      .info-value {
+        font-size: 22px;
+      }
     }
   }
 
   .rhs {
     width: 50%;
+  }
+
+  @media (max-width: 2000px) {
+    flex-direction: column;
+
+    .lhs,
+    .rhs {
+      width: 100%;
+    }
   }
 }
 </style>

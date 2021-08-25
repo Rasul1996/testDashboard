@@ -1,19 +1,19 @@
 <template>
   <div class="box">
-    <h3 class="box-title" style="font-size: 20px">
-      {{ $t('numberStatementsRegion') }}
+    <h3 class="fs-3 ff-bold" style="font-size: 20px">
+      {{ $t("numberStatementsRegion") }}
     </h3>
     <ul class="data-table">
       <li class="data-item" v-for="item of items" :key="item.id">
-        <span style="width: 20%">{{ item.key }}</span>
-        <div style="width: 70%">
+        <span class="item-key">{{ item.key }}</span>
+        <div class="item-progress">
           <div
             :style="`width: ${item.percent}%`"
             style="height: 8px"
             class="data-progress"
           ></div>
         </div>
-        <span style="width: 10%; text-align: end">{{ item.value }}</span>
+        <span class="item-value" style="text-align: end">{{ item.value }}</span>
       </li>
     </ul>
   </div>
@@ -49,6 +49,60 @@ export default {
     padding: 10px 16px;
     &:nth-child(odd) {
       background-color: var(--primary);
+    }
+
+    .item-key {
+      width: 20%;
+    }
+
+    .item-progress {
+      width: 70%;
+    }
+
+    .item-value {
+      width: 10%;
+    }
+
+    @media (max-width: 2700px) {
+      .item-key {
+        width: 25%;
+      }
+
+      .item-progress {
+        width: 65%;
+      }
+
+      .item-value {
+        width: 10%;
+      }
+    }
+
+    @media (max-width: 2500px) {
+      .item-key {
+        width: 30%;
+      }
+
+      .item-progress {
+        width: 60%;
+      }
+
+      .item-value {
+        width: 10%;
+      }
+    }
+
+    @media (max-width: 2000px) {
+      .item-key {
+        width: 33%;
+      }
+
+      .item-progress {
+        width: 57%;
+      }
+
+      .item-value {
+        width: 10%;
+      }
     }
   }
 }

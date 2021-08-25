@@ -1,7 +1,7 @@
 <template>
   <div class="box content-box" :style="{ background: color }">
-    <div class="content-title">{{ title }}</div>
-    <div class="content-value">{{ $formatNumber(value) }}</div>
+    <span class="ff-medium">{{ title }}</span>
+    <h3 class="ff-bold">{{ $formatNumber(value) }}</h3>
   </div>
 </template>
 
@@ -27,22 +27,56 @@ export default {
 
 <style lang="scss" scoped>
 .content-box {
-  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
-  .content-title {
-    width: 50%;
-    font-size: 1.2rem;
-    font-family: "inter" !important;
+  span {
+    width: 55%;
+    font-size: 20px;
   }
 
-  .content-value {
-    width: 50%;
-    font-size: 3rem;
-    color: var(--white);
-    font-family: "inter-bold" !important;
+  h3 {
+    width: 45%;
     text-align: end;
+    font-size: 48px;
+  }
+
+  // MEDIA
+  @media (max-width: 2500px) {
+    span {
+      width: 52% !important;
+      font-size: 18px;
+    }
+
+    h3 {
+      width: 47% !important;
+      font-size: 32px;
+    }
+  }
+
+  @media (max-width: 2000px) {
+    span {
+      width: 54%;
+      font-size: 17px;
+    }
+
+    h3 {
+      width: 45%;
+      font-size: 26px;
+    }
+  }
+
+  @media (max-width: 1500px) {
+    span {
+      width: 44%;
+      font-size: 16px;
+    }
+
+    h3 {
+      width: 55%;
+      font-size: 22px;
+    }
   }
 }
 </style>

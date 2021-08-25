@@ -8,14 +8,20 @@
     --header-text-size: 5rem;
 }
 
-@media (max-width: 2000px) {
+@media (max-width: 2700px) {
+    :root {
+        --header-text-size: 4rem;
+    }
+}
+
+@media (max-width: 2500px) {
     :root {
         --header-text-size: 3rem;
     }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 2000px) {
     :root {
-        --header-text-size: 1.9rem;
+        --header-text-size: 2.5rem;
     }
 }

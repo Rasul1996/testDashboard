@@ -82,7 +82,6 @@ export default {
     display: flex;
     align-items: center;
     max-width: 30%;
-    background-color: red;
     span {
       font-family: "inter-bold" !important;
       font-size: 26px;
@@ -117,6 +116,14 @@ export default {
     img {
       width: 100%;
       height: 100%;
+    }
+
+    @media (max-width: 2700px) {
+      width: 333px;
+    }
+
+    @media (max-width: 2500px) {
+      width: 300px;
     }
   }
 }
