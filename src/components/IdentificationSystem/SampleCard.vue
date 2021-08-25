@@ -2,7 +2,7 @@
   <div class="box sample-box">
     <div class="sample-info">
       <p class="sample-key">
-        Количество выданных ID-карт с персональным кабинетом
+        {{ $t('numberIdPersonalAccount') }}
       </p>
       <p class="sample-value">413 244</p>
     </div>

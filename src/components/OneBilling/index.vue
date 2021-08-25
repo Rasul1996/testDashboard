@@ -1,27 +1,27 @@
 <template>
   <div class="box">
-    <h3 class="box-title">Единый биллинг</h3>
+    <h3 class="box-title">{{ $t("unifiedBilling") }}</h3>
   </div>
 
   <div class="box-cards">
     <BoxCard
       class="single-box-card"
-      title="Общее количество транзакций"
+      :title="$t('totalCountTransactions')"
       :value="2412314"
     />
     <BoxCard
       class="single-box-card"
-      title="Общее сумма транзакций"
+      :title="$t('numberTransactionsToday')"
       :value="4212314"
     />
     <BoxCard
       class="single-box-card"
-      title="Количество транзакций сегодня"
+      :title="$t('totalAmountTransactions')"
       :value="54314"
     />
     <BoxCard
       class="single-box-card"
-      title="Сумма транзакций сегодня"
+      :title="$t('amountTransactionsToday')"
       :value="31544"
     />
   </div>

@@ -1,15 +1,17 @@
 <template>
   <div>
     <div class="box">
-      <div class="box-title">Межведомственная интеграционная платформа</div>
+      <div class="box-title">
+        {{ $t("interdepartmentalIntegrationPlatform") }}
+      </div>
     </div>
 
     <div class="flex mt-1">
       <div style="width: 31%; margin-right: 5px">
-        <BoxCard title="Количество запросов за сегодня" value="412 314" />
+        <BoxCard :title="$t('numberResponces')" value="412 314" />
         <BoxCard
           class="mt-1"
-          title="Количество запросов за вчера"
+          :title="$t('numberResponcesYesterday')"
           value="512 314"
         />
       </div>
@@ -34,27 +36,27 @@ export default {
       items: [
         {
           id: 1,
-          key: "Справка о трудоустройстве (Министерство труда)",
+          key: this.$i18n.t("employementCertificate"),
           value: 1321,
         },
         {
           id: 2,
-          key: "Информация по фирме (Министерство внешних эконо",
+          key: this.$i18n.t("infoOnFirm"),
           value: 4432,
         },
         {
           id: 3,
-          key: "Уточнение информации (Государственный комитет по ",
+          key: this.$i18n.t("certificationInfo"),
           value: 655,
         },
         {
           id: 4,
-          key: "Информация по фирме (Министерство внешних эконо",
+          key: this.$i18n.t("certificationInfo"),
           value: 4432,
         },
         {
           id: 5,
-          key: "Уточнение информации (Государственный комитет по ",
+          key: this.$i18n.t("clarificationInfo"),
           value: 655,
         },
       ],
