@@ -1,16 +1,16 @@
 <template>
   <div>
     <div class="flex gap">
-      <ContentCard title="Общее количество пользователей" :value="2412314" />
-      <ContentCard title="Кол-во пользователей за сегодня" :value="16441" />
+      <ContentCard :title="$t('totalNumberUsers')" :value="2412314" />
+      <ContentCard :title="$t('numberUsersToday')" :value="16441" />
     </div>
 
     <div class="flex gap mt-1">
       <GraphCard
-        title="Соотношение женщины/мужчины"
-        firstKey="Мужчин"
+        :title="$t('femaleMaleRatio')"
+        :firstKey="$t('male')"
         :firstValue="9321"
-        secondKey="Женщин"
+        :secondKey="$t('female')"
         :secondValue="7764"
         firstColor="#5DCAED"
         secondColor="#FC4788"

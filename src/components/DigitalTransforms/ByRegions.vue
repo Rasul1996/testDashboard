@@ -1,27 +1,27 @@
 <template>
   <div class="box">
     <div class="box-info">
-      <h3 class="box-title">{{ "totalByTerritories" }}</h3>
+      <h3 class="box-title">{{ $t("totalByTerritories") }}</h3>
       <span class="bold">1641</span>
     </div>
     <div class="info-cards" style="margin-top: 1.2em">
       <InfoCard
         class="single-card"
-        title="Реализовано"
+        :title="$t('implemented')"
         info="783"
         icon="check.svg"
         color="rgba(39, 174, 96, 0.75)"
       />
       <InfoCard
         class="single-card"
-        title="В процессе"
+        :title="$t('during')"
         info="112"
         icon="Warning.svg"
         color="rgba(242, 153, 74, 0.75)"
       />
       <InfoCard
         class="single-card"
-        title="Не начато"
+        :title="$t('notStarted')"
         info="526"
         icon="Time.svg"
         color="rgba(235, 87, 87, 0.75)"
@@ -31,28 +31,28 @@
       <SubInfoCard
         class="single-sub-card"
         :index="1"
-        title="Ташкентсткая область"
+        :title="$t('tashkentRegion')"
         :info="21331"
         color="rgba(82, 190, 128, 0.5)"
       />
       <SubInfoCard
         class="single-sub-card"
         :index="2"
-        title="Бухарская область"
+        :title="$t('bukharaRegion')"
         :info="52342"
         color="rgba(82, 190, 128, 0.25)"
       />
       <SubInfoCard
         class="single-sub-card"
         :index="3"
-        title="Ташкентсткая область"
+        :title="$t('tashkentRegion')"
         :info="4421"
         color="rgba(239, 121, 121, 0.25)"
       />
       <SubInfoCard
         class="single-sub-card"
         :index="4"
-        title="Бухарская область"
+        :title="$t('bukharaRegion')"
         :info="3231"
         color="rgba(239, 121, 121, 0.5)"
       />

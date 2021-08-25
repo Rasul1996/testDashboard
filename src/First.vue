@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="box">
-      <h3 class="box-title">{{ "digitalInfo" }}</h3>
+      <h3 class="box-title">{{ $t("digitalInfo") }}</h3>
     </div>
     <div style="margin-top: 0.5em">
       <DigitalTransforms />
