@@ -3,175 +3,204 @@
         "id": 1,
         "region": "Тошкент шаҳри",
         "district": "Юнусобод тумани",
-        "rating": 84.3
+        "rating": 84.3,
+        "status": 1
     },
     {
         "id": 2,
         "region": "Жиззах вилояти",
         "district": "Жиззах шаҳри",
-        "rating": 80.5
+        "rating": 80.5,
+        "status": 1
     },
     {
         "id": 3,
         "region": "Тошкент шаҳри",
         "district": "Мирзо Улуғбек тумани",
         "rating": 79.5
+        ,"status": 1
     },
     {
         "id": 4,
         "region": "Тошкент шаҳри",
         "district": "Чилонзор тумани",
         "rating": 77.4
+        ,"status": 1
     },
     {
         "id": 5,
         "region": "Тошкент шаҳри",
         "district": "Олмазор тумани",
         "rating": 77.3
+        ,"status": 1
     },
     {
         "id": 6,
         "region": "Тошкент шаҳри",
         "district": "Шайхонтохур тумани",
         "rating": 77.1
+        ,"status": 1
     },
     {
         "id": 7,
         "region": "Тошкент шаҳри",
         "district": "Миробод тумани",
         "rating": 76.6
+        ,"status": 1
     },
     {
         "id": 8,
         "region": "Самарқанд вилояти",
         "district": "Самарқанд шаҳри",
         "rating": 76.4
+        ,"status": 1
     },
     {
         "id": 9,
         "region": "Хоразм вилояти",
         "district": "Урганч шаҳри",
         "rating": 76.0
+        ,"status": 1
     },
     {
         "id": 10,
         "region": "Тошкент шаҳри",
         "district": "Яшнобод тумани",
         "rating": 75.4
+        ,"status": 1
     },
     {
         "id": 11,
         "region": "Тошкент шаҳри",
         "district": "Сергели тумани",
         "rating": 74.8
+        ,"status": 1
     },
     {
         "id": 12,
         "region": "Тошкент шаҳри",
         "district": "Яккасарой тумани",
         "rating": 74.4
+        ,"status": 1
     },
     {
         "id": 13,
         "region": "Наманган вилояти",
         "district": "Наманган шаҳри",
         "rating": 74.3
+        ,"status": 1
     },
     {
         "id": 14,
         "region": "Жиззах вилояти",
         "district": "Зарбдор тумани",
         "rating": 74.0
+        ,"status": 1
     },
     {
         "id": 15,
         "region": "Тошкент шаҳри",
         "district": "Учтепа тумани",
         "rating": 73.9
+        ,"status": 1
     },
     {
         "id": 16,
         "region": "Жиззах вилояти",
         "district": "Ш.Рашидов тумани",
         "rating": 73.5
+        ,"status": 1
     },
     {
         "id": 17,
         "region": "Навоий вилояти",
         "district": "Навоий шаҳри",
         "rating": 73.4
+        ,"status": 1
     },
     {
         "id": 18,
         "region": "Сурхондарё вилояти",
         "district": "Термиз шаҳри",
         "rating": 73.0
+        ,"status": 1
     },
     {
         "id": 19,
         "region": "Фарғона вилояти",
         "district": "Фарғона шаҳри",
         "rating": 73.0
+        ,"status": 1
     },
     {
         "id": 20,
         "region": "Қашқадарё вилояти",
         "district": "Нишон тумани",
         "rating": 72.6
+        ,"status": 1
     },
     {
         "id": 21,
         "region": "Наманган вилояти",
         "district": "Мингбулоқ тумани",
         "rating": 72.5
+        ,"status": 1
     },
     {
         "id": 22,
         "region": "Тошкент шаҳри",
         "district": "Бектемир тумани",
         "rating": 73.3
+        ,"status": 1
     },
     {
         "id": 23,
         "region": "Фарғона вилояти",
         "district": "Қўқон шаҳри",
         "rating": 72.0
+        ,"status": 1
     },
     {
         "id": 24,
         "region": "Навоий вилояти",
         "district": "Зарафшон шаҳри",
         "rating": 71.8
+        ,"status": 1
     },
     {
         "id": 25,
         "region": "Фарғона вилояти",
         "district": "Марғилон шаҳри",
         "rating": 71.8
+        ,"status": 1
     },
     {
         "id": 26,
         "region": "Хоразм вилояти",
         "district": "Хонқа тумани",
         "rating": 71.7
+        ,"status": 1
     },
     {
         "id": 27,
         "region": "Сурхондарё вилояти",
         "district": "Шўрчи тумани",
         "rating": 71.4
+        ,"status": 1
     },
     {
         "id": 28,
         "region": "Қашқадарё вилояти",
         "district": "Қарши шаҳри",
         "rating": 71.4
+        ,"status": 1
     },
     {
         "id": 29,
         "region": "Хоразм вилояти",
         "district": "Шовот тумани",
         "rating": 71.1
+        ,"status": 1
     },
     {
         "id": 30,
@@ -1150,77 +1179,90 @@
         "region": "Жиззах вилояти",
         "district": "Арнасой тумани",
         "rating": 54.8
+        ,"status": 3
     },
     {
         "id": 193,
         "region": "Жиззах вилояти",
         "district": "Янгиобод тумани",
         "rating": 54.2
+        ,"status": 3
     },
     {
         "id": 194,
         "region": "Қорақалпоғистон Республикаси",
         "district": "Қўнғирот тумани",
         "rating": 53.8
+        ,"status": 3
     },
     {
         "id": 195,
         "region": "Қорақалпоғистон Республикаси",
         "district": "Чимбой тумани",
         "rating": 53.7
+        ,"status": 3
     },
     {
         "id": 196,
         "region": "Андижон вилояти",
         "district": "Жалақудуқ тумани",
         "rating": 53.6
+        ,"status": 3
     },
     {
         "id": 197,
         "region": "Қорақалпоғистон Республикаси",
         "district": "Тўрткўл тумани",
         "rating": 53.6
+        ,"status": 3
     },
     {
         "id": 198,
         "region": "Андижон вилояти",
         "district": "Андижон тумани",
         "rating": 53.6
+        ,"status": 3
     },
     {
         "id": 199,
         "region": "Қорақалпоғистон Республикаси",
         "district": "Хўжайли тумани",
         "rating": 53.3
+        ,"status": 3
     },
     {
         "id": 200,
         "region": "Қорақалпоғистон Республикаси",
         "district": "Қораўзак тумани",
         "rating": 52.2
+        ,"status": 3
     },
     {
         "id": 201,
         "region": "Қорақалпоғистон Республикаси",
         "district": "Шўманай тумани",
         "rating": 51.9
+        ,"status": 3
     },
     {
         "id": 202,
         "region": "Андижон вилояти",
         "district": "Олтинкўл тумани",
         "rating": 51.2
+        ,"status": 3
     },
     {
         "id": 203,
         "region": "Қорақалпоғистон Республикаси",
         "district": "Тахтакўпир тумани",
         "rating": 51.0
+        ,"status": 3
     },
     {
         "id": 204,
         "region": "Жиззах вилояти",
         "district": "Фориш тумани",
         "rating": 44.3
+        ,"status": 3
     }
 ]

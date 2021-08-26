@@ -15,4 +15,7 @@ app.config.globalProperties.$formatNumber = (number) => {
   }
 };
 
-app.use(store).use(i18n).mount("#app");
+(app.config.globalProperties.$randomInteger = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}),
+  app.use(store).use(i18n).mount("#app");

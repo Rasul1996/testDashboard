@@ -40,6 +40,13 @@ export default {
   padding: 10px 15px;
   border-radius: 8px;
 
+  // .sub-title {
+  //   text-overflow: ellipsis;
+  //   overflow: hidden;
+  //   height: 1.2em;
+  //   white-space: nowrap;
+  // }
+
   .lhs {
     span:last-child {
       margin-left: 35px;

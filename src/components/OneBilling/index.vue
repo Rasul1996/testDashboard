@@ -7,22 +7,22 @@
     <BoxCard
       class="single-box-card"
       :title="$t('totalCountTransactions')"
-      :value="2412314"
+      :value="allTransaction"
     />
     <BoxCard
       class="single-box-card"
       :title="$t('numberTransactionsToday')"
-      :value="4212314"
+      :value="todayTransaction"
     />
     <BoxCard
       class="single-box-card"
       :title="$t('totalAmountTransactions')"
-      :value="54314"
+      :value="allSoumTransaction"
     />
     <BoxCard
       class="single-box-card"
       :title="$t('amountTransactionsToday')"
-      :value="31544"
+      :value="todaySoumTransaction"
     />
   </div>
 </template>
@@ -32,6 +32,33 @@ import BoxCard from "../BoxCard.vue";
 export default {
   components: {
     BoxCard,
+  },
+  data() {
+    return {
+      allTransaction: 12451363,
+      allSoumTransaction: 1492885469785,
+      todayTransaction: 11556,
+      todaySoumTransaction: 156265658,
+    };
+  },
+
+  mounted() {
+    this.calculate();
+  },
+
+  methods: {
+    calculate() {
+      setTimeout(() => {
+        const a = this.$randomInteger(10, 20);
+        const b = this.$randomInteger(200_000, 800_000);
+
+        this.allTransaction += a;
+        this.allSoumTransaction += b;
+
+        this.todayTransaction += a;
+        this.todaySoumTransaction += b;
+      }, 15000);
+    },
   },
 };
 </script>

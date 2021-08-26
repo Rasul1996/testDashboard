@@ -8,15 +8,15 @@
 
     <div class="flex mt-1">
       <div style="width: 31%; margin-right: 5px">
-        <BoxCard :title="$t('numberResponces')" value="412 314" />
+        <BoxCard :title="$t('numberResponces')" :value="todayQuery" />
         <BoxCard
           class="mt-1"
           :title="$t('numberResponcesYesterday')"
-          value="512 314"
+          :value="yesterdayQuery"
         />
       </div>
       <div style="width: 69%">
-        <TopQueries :items="items" />
+        <TopQueries />
       </div>
     </div>
   </div>
@@ -33,34 +33,27 @@ export default {
   },
   data() {
     return {
-      items: [
-        {
-          id: 1,
-          key: this.$i18n.t("employementCertificate"),
-          value: 1321,
-        },
-        {
-          id: 2,
-          key: this.$i18n.t("infoOnFirm"),
-          value: 4432,
-        },
-        {
-          id: 3,
-          key: this.$i18n.t("certificationInfo"),
-          value: 655,
-        },
-        {
-          id: 4,
-          key: this.$i18n.t("certificationInfo"),
-          value: 4432,
-        },
-        {
-          id: 5,
-          key: this.$i18n.t("clarificationInfo"),
-          value: 655,
-        },
-      ],
+      todayQuery: 0,
+      yesterdayQuery: 7601322,
     };
+  },
+  mounted() {
+    this.calculateTodayQuery();
+  },
+  methods: {
+    calculateTodayQuery() {
+      const time = new Date().getHours();
+
+      if (time < 9) {
+        this.todayQuery = 856349;
+      } else {
+        this.todayQuery = 642517;
+
+        setInterval(() => {
+          this.todayQuery += this.$randomInteger(2000, 3300);
+        }, 15000);
+      }
+    },
   },
 };
 </script>

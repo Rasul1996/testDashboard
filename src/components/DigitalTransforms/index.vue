@@ -6,7 +6,7 @@
     </section>
 
     <section class="mt-1">
-      <ContentCard :title="$t('totalByTerritories')" :value="1641" />
+      <ContentCard :title="$t('totalDepartment')" :value="483" />
       <ByDepartments class="mt-1" />
     </section>
   </div>
