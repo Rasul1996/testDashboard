@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <div class="info-cards" style="margin-top: 1.2em">
+    <div class="info-cards">
       <InfoCard
         class="single-card"
         :title="$t('implemented')"

@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <h3 class="fs-3 ff-bold" style="font-size: 20px">
+    <h3 class="fs-3 ff-bold" style="font-size: 20px; margin: 20px 0">
       {{ $t("numberStatementsRegion") }}
     </h3>
     <ul class="data-table">
@@ -32,8 +32,6 @@ export default {
 
 <style lang="scss" scoped>
 .data-table {
-  margin-top: 1.1em;
-
   .data-item {
     .data-progress {
       background-image: linear-gradient(
@@ -46,7 +44,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 16px;
+    padding: 14.5px 16px;
     &:nth-child(odd) {
       background-color: var(--primary);
     }

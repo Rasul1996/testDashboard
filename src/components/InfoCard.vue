@@ -37,7 +37,7 @@ export default {
   border-radius: 8px;
 
   .card-content {
-    margin-top: 0.7em;
+    margin-top: 13px;
     display: flex;
     align-items: center;
     justify-content: space-between;
