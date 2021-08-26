@@ -3,11 +3,17 @@
     class="sub-info-card flex justify-between align-center"
     :style="`background-color: ${color}`"
   >
-    <div class="lhs flex align-center">
-      <span class="sub-index ff-open-sans-bold">{{ index }}</span>
-      <span class="sub-title ff-open-sans">{{ title }}</span>
+    <div class="lhs flex align-center" style="width: 90%">
+      <div class="sub-index ff-open-sans-bold" style="width: 10%">
+        {{ index }}
+      </div>
+      <div class="sub-title ff-open-sans" style="width: 90%" :title="title">
+        {{ title }}
+      </div>
     </div>
-    <span class="sub-info ff-open-sans-bold">{{ $formatNumber(info) }}</span>
+    <div class="sub-info ff-open-sans-bold" style="width: 10%">
+      {{ $formatNumber(info) }}
+    </div>
   </div>
 </template>
 
@@ -39,6 +45,13 @@ export default {
   font-size: 18px;
   padding: 10px 15px;
   border-radius: 8px;
+
+  .sub-title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 1.2em;
+    white-space: nowrap;
+  }
 
   .lhs {
     span:last-child {

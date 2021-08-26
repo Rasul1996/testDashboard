@@ -23,78 +23,30 @@
         color="rgba(235, 87, 87, 0.75)"
       />
     </div>
-    <div class="swiper" style="margin-top: 1em">
+    <div class="swiper target3" style="margin-top: 1em">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
+        <div class="swiper-slide" v-for="item of active" :key="item.id">
           <SubInfoCard
             class="single-sub-card"
-            :index="1"
-            :title="$t('tashkentRegion')"
-            :info="21331"
-            color="rgba(82, 190, 128, 0.5)"
+            :index="item.id"
+            :title="item.label"
+            :info="item.value"
+            :color="`rgba(82, 190, 128, 0.${10 - Math.round(item.value / 10)})`"
           />
         </div>
-        <div class="swiper-slide">
+      </div>
+    </div>
+    <div class="swiper target4" style="margin-top: 10px">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" v-for="item of danger" :key="item.id">
           <SubInfoCard
             class="single-sub-card"
-            :index="2"
-            :title="$t('bukharaRegion')"
-            :info="52342"
-            color="rgba(82, 190, 128, 0.25)"
-          />
-        </div>
-        <div class="swiper-slide">
-          <SubInfoCard
-            class="single-sub-card"
-            :index="3"
-            :title="$t('tashkentRegion')"
-            :info="4421"
-            color="rgba(239, 121, 121, 0.25)"
-          />
-        </div>
-        <div class="swiper-slide">
-          <SubInfoCard
-            class="single-sub-card"
-            :index="4"
-            :title="$t('bukharaRegion')"
-            :info="3231"
-            color="rgba(239, 121, 121, 0.5)"
-          />
-        </div>
-        <div class="swiper-slide">
-          <SubInfoCard
-            class="single-sub-card"
-            :index="1"
-            :title="$t('tashkentRegion')"
-            :info="21331"
-            color="rgba(82, 190, 128, 0.5)"
-          />
-        </div>
-        <div class="swiper-slide">
-          <SubInfoCard
-            class="single-sub-card"
-            :index="2"
-            :title="$t('bukharaRegion')"
-            :info="52342"
-            color="rgba(82, 190, 128, 0.25)"
-          />
-        </div>
-        <div class="swiper-slide">
-          <SubInfoCard
-            class="single-sub-card"
-            :index="3"
-            :title="$t('tashkentRegion')"
-            :info="4421"
-            color="rgba(239, 121, 121, 0.25)"
-          />
-        </div>
-        <div class="swiper-slide">
-          <SubInfoCard
-            class="single-sub-card"
-            :index="4"
-            :title="$t('bukharaRegion')"
-            :info="3231"
-            color="rgba(239, 121, 121, 0.5)"
+            :index="item.id"
+            :title="item.label"
+            :info="item.value"
+            :color="`rgba(239, 121, 121, 0.${
+              10 - Math.round(item.value / 10)
+            })`"
           />
         </div>
       </div>
@@ -106,47 +58,94 @@
 <script>
 import InfoCard from "@/components/InfoCard.vue";
 import SubInfoCard from "@/components/SubInfoCard.vue";
+
+import ratings from "@/ratings.json";
 /* eslint-disable no-undef */
 export default {
   components: {
     InfoCard,
     SubInfoCard,
   },
+  data() {
+    return {
+      active: ratings.filter((item) => item.status === 1),
+      danger: ratings.filter((item) => item.status === 3),
+    };
+  },
   mounted() {
-    // eslint-disable-next-line no-unused-vars
-    const swiper = new Swiper(".swiper", {
-      slidesPerView: 4,
-      // Optional parameters
-      direction: "vertical",
-      loop: true,
-      autoplay: {
-        delay: 7500,
-        disableOnInteraction: false,
-      },
+    this.initSwiper1();
+    this.initSwiper2();
+  },
+  methods: {
+    initSwiper1() {
+      // eslint-disable-next-line no-unused-vars
+      const swiper = new Swiper(".target3", {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        slidesPerGroup: 2,
+        // Optional parameters
+        direction: "vertical",
+        loop: true,
+        autoplay: {
+          delay: 7500,
+          disableOnInteraction: false,
+        },
 
-      // If we need pagination
-      pagination: {
-        el: ".swiper-pagination",
-      },
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
 
-      // Navigation arrows
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
 
-      // And if we need scrollbar
-      scrollbar: {
-        el: ".swiper-scrollbar",
-      },
-    });
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
+    },
+    initSwiper2() {
+      // eslint-disable-next-line no-unused-vars
+      const swiper = new Swiper(".target4", {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 10,
+        // Optional parameters
+        direction: "vertical",
+        loop: true,
+        autoplay: {
+          delay: 7500,
+          disableOnInteraction: false,
+        },
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
+    },
   },
 };
 </script>
 
 <style scoped>
 .swiper {
-  height: 160px;
+  height: 90px;
 }
 </style>
 

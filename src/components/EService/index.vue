@@ -1,16 +1,20 @@
 <template>
   <div class="flex gap">
-    <ContentCard class="w-50" :title="$t('totalNumberApp')" :value="2412314" />
-    <ContentCard class="w-50" :title="$t('totalNumberUsers')" :value="16441" />
+    <ContentCard class="w-50" :title="$t('totalNumberApp')" :value="allApps" />
+    <ContentCard
+      class="w-50"
+      :title="$t('totalNumberUsers')"
+      :value="usersCount"
+    />
   </div>
   <div class="flex gap mt-1">
     <GraphCard
       class="w-50"
       :title="$t('claimsbelonging')"
       :firstKey="$t('phisicallyPersons')"
-      :firstValue="1923321"
+      :firstValue="physicalEntity"
       :secondKey="$t('legalEntities')"
-      :secondValue="327764"
+      :secondValue="legalEntity"
       firstColor="#F17459"
       secondColor="#51D7E0"
       :id="1"
@@ -19,9 +23,9 @@
       class="w-50"
       :title="$t('generalStatisticsUsers')"
       :firstKey="$t('male')"
-      :firstValue="9321"
+      :firstValue="maleUsers"
       :secondKey="$t('female')"
-      :secondValue="7764"
+      :secondValue="femaleUsers"
       firstColor="#5DCAED"
       secondColor="#FC4788"
       :id="2"
@@ -30,7 +34,7 @@
   <div class="flex mt-1" style="gap: 4px">
     <ContentCard
       class="w-33"
-      :value="321"
+      :value="265"
       color="rgba(89, 153, 241, 0.5)"
       :title="$t('numberServicesImplemented')"
     />
@@ -38,13 +42,13 @@
       class="w-33"
       :title="$t('numberNewService')"
       color="rgba(82, 190, 128, 0.5)"
-      :value="3"
+      :value="47"
     />
     <ContentCard
       class="w-33"
       color="rgba(175, 116, 230, 0.5  )"
       :title="$t('numberMobileServiceEPIGU')"
-      :value="314"
+      :value="47"
     />
   </div>
 </template>
@@ -58,5 +62,31 @@ export default {
     GraphCard,
     ContentCard,
   },
+  data() {
+    return {
+      allApps: 33900000,
+      usersCount: 580900,
+    }
+  },
+  mounted() {
+    setInterval(() => {
+      this.allApps += this.$randomInteger(1, 3);
+      this.usersCount += this.$randomInteger(1, 3);
+    }, 15 * 1000)
+  },
+  computed: {
+    maleUsers() {
+      return Math.round((this.usersCount / 100) * 67)
+    },
+    femaleUsers() {
+      return Math.round((this.usersCount / 100) * 33)
+    },
+    physicalEntity() {
+      return Math.round((this.allApps / 100) / 92)
+    },
+    legalEntity() {
+      return Math.round((this.allApps / 100) / 8)
+    }
+  }
 };
 </script>

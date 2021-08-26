@@ -4,12 +4,12 @@
       <ContentCard
         class="w-50"
         :title="$t('totalNumberUsers')"
-        :value="2412314"
+        :value="$store.state.oneIdUserCount"
       />
       <ContentCard
         class="w-50"
         :title="$t('numberUsersToday')"
-        :value="16441"
+        :value="$store.state.oneIdUserCountToday"
       />
     </div>
 
@@ -18,9 +18,9 @@
         class="w-50"
         :title="$t('femaleMaleRatio')"
         :firstKey="$t('male')"
-        :firstValue="9321"
+        :firstValue="$store.getters.getMaleUsers"
         :secondKey="$t('female')"
-        :secondValue="7764"
+        :secondValue="$store.getters.getFemaleUsers"
         firstColor="#5DCAED"
         secondColor="#FC4788"
         :id="3"

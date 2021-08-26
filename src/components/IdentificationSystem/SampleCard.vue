@@ -4,7 +4,7 @@
       <p class="sample-key ff-medium">
         {{ $t("numberIdPersonalAccount") }}
       </p>
-      <p class="sample-value ff-bold">{{ $formatNumber(413244) }}</p>
+      <p class="sample-value ff-bold">{{ $formatNumber(count) }}</p>
     </div>
     <div class="sample-logo">
       <img style="width: 100%" src="@/assets/images/OneID.svg" alt="" />
@@ -13,7 +13,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      count: 531738
+    }
+  },
+  mounted() {
+    setInterval(() => {
+      this.count += this.$randomInteger(1, 3);
+    }, 15 * 1000)
+  }
+};
 </script>
 
 <style lang="scss" scoped>

@@ -9,7 +9,7 @@
     </div>
 
     <div class="mt-1">
-      <DataTable :items="items" />
+      <DataTable :items="items" :title="$t('numberStatementsRegion')" />
     </div>
 
     <div class="box" style="margin-top: 35px">
@@ -21,7 +21,7 @@
         class="w-50"
         :title="$t('numberOpenDataSets')"
         logo="Group.svg"
-        :value="2412314"
+        :value="650"
         color="#3D61A0"
       />
       <DataCard
@@ -30,7 +30,7 @@
         :title="$t('numberClassifierSets')"
         logo="Sign.svg"
         color="#4B689C"
-        :value="4314"
+        :value="53"
       />
     </div>
 
@@ -42,21 +42,21 @@
         <InfoCard
           class="single-card"
           :title="$t('passportProject')"
-          :info="783"
+          :info="41"
           icon="LOGO 2.svg"
           color="#585E92"
         />
         <InfoCard
           class="single-card"
           :title="$t('passportLook')"
-          :info="112"
+          :info="13"
           icon="Time.svg"
           color="rgba(245, 173, 110, 0.5)"
         />
         <InfoCard
           class="single-card"
           :title="$t('passportFor')"
-          :info="526"
+          :info="121"
           icon="check.svg"
           color="rgba(82, 190, 128, 0.5)"
         />
@@ -84,45 +84,85 @@ export default {
         {
           id: 1,
           key: this.$i18n.t("andijan"),
-          value: 1321,
-          percent: 78,
+          value: 23179,
+          percent: (23179 / 30_000) * 100,
         },
         {
           id: 2,
           key: this.$i18n.t("bukhara"),
-          value: 4432,
-          percent: 67,
+          value: 27362,
+          percent: (27362 / 30_000) * 100,
         },
         {
           id: 3,
           key: this.$i18n.t("jizzakh"),
-          value: 655,
-          percent: 56,
+          value: 15559,
+          percent: (15559 / 30_000) * 100,
         },
         {
           id: 4,
           key: this.$i18n.t("kashkadarya"),
-          value: 1321,
-          percent: 39,
+          value: 23530,
+          percent: (23530 / 30_000) * 100,
         },
         {
           id: 5,
           key: this.$i18n.t("navoiy"),
-          value: 4431,
-          percent: 29,
+          value: 11943,
+          percent: (11943 / 30_000) * 100,
         },
-        {
-          id: 6,
-          key: this.$i18n.t("namangan"),
-          value: 6535,
-          percent: 35,
-        },
-        {
-          id: 7,
-          key: this.$i18n.t("samarkand"),
-          value: 655,
-          percent: 32,
-        },
+        // {
+        //   id: 6,
+        //   key: this.$i18n.t("namangan"),
+        //   value: 23401,
+        //   percent: 35,
+        // },
+        // {
+        //   id: 7,
+        //   key: this.$i18n.t("samarkand"),
+        //   value: 44470,
+        //   percent: 32,
+        // },
+        // {
+        //   id: 8,
+        //   key: this.$i18n.t("surkhandarya"),
+        //   value: 10230,
+        //   percent: 28,
+        // },
+        // {
+        //   id: 9,
+        //   key: this.$i18n.t("sirdarya"),
+        //   value: 5098,
+        //   percent: 25,
+        // },
+        // {
+        //   id: 10,
+        //   key: this.$i18n.t("tashkent"),
+        //   value: 62570,
+        //   percent: 25,
+        //   hidden: true
+        // },
+        // {
+        //   id: 11,
+        //   key: this.$i18n.t("fergana"),
+        //   value: 22362,
+        //   percent: 25,
+        //   hidden: true
+        // },
+        // {
+        //   id: 12,
+        //   key: this.$i18n.t("khorezm"),
+        //   value: 34512,
+        //   percent: 25,
+        //   hidden: true
+        // },
+        // {
+        //   id: 12,
+        //   key: this.$i18n.t("Karak"),
+        //   value: 17446,
+        //   percent: 25,
+        //   hidden: true
+        // },
       ],
     };
   },
