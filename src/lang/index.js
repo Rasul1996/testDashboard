@@ -9,7 +9,7 @@ const messages = {
 };
 
 export const i18n = createI18n({
-  locale: "ru",
+  locale: "uz",
   fallbackLocale: "ru",
   messages,
 });
