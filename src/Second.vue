@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="box">
-      <div class="box-title">{{ $t("EGovernmentServices") }}</div>
+      <h3 class="box-title">{{ $t("EGovernmentServices") }}</h3>
     </div>
 
     <div class="mt-1">
@@ -12,18 +12,20 @@
       <DataTable :items="items" />
     </div>
 
-    <div class="box mt-1">
-      <div class="box-title">{{ $t("EGovernmentProject") }}</div>
+    <div class="box" style="margin-top: 35px">
+      <h3 class="box-title">{{ $t("EGovernmentProject") }}</h3>
     </div>
 
     <div class="flex mt-1">
       <DataCard
+        class="w-50"
         :title="$t('numberOpenDataSets')"
         logo="Group.svg"
         :value="2412314"
         color="#3D61A0"
       />
       <DataCard
+        class="w-50"
         style="margin-left: 4px"
         :title="$t('numberClassifierSets')"
         logo="Sign.svg"
@@ -39,21 +41,21 @@
       <div class="info-cards">
         <InfoCard
           class="single-card"
-          :title="$t('implemented')"
+          :title="$t('passportProject')"
           :info="783"
           icon="LOGO 2.svg"
           color="#585E92"
         />
         <InfoCard
           class="single-card"
-          :title="$t('during')"
+          :title="$t('passportLook')"
           :info="112"
           icon="Time.svg"
           color="rgba(245, 173, 110, 0.5)"
         />
         <InfoCard
           class="single-card"
-          :title="$t('notStarted')"
+          :title="$t('passportFor')"
           :info="526"
           icon="check.svg"
           color="rgba(82, 190, 128, 0.5)"

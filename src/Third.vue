@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="box">
-      <div class="box-title">{{ $t("EGovernmentServices") }}</div>
+      <h3 class="box-title">{{ $t("oneId") }}</h3>
     </div>
 
     <div class="mt-1">
@@ -10,7 +10,7 @@
     <div class="mt-1">
       <DataTable :items="items" />
     </div>
-    <div class="mt-1">
+    <div style="margin-top: 35px">
       <IntegrationPlatform />
     </div>
   </div>

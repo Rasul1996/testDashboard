@@ -1,8 +1,8 @@
 <template>
   <div class="info-card" :style="`background-color: ${color}`">
-    <h4 class="card-title">{{ title }}</h4>
+    <h4 class="ff-medium card-title">{{ title }}</h4>
     <div class="card-content">
-      <span>{{ info }}</span>
+      <span class="ff-bold">{{ info }}</span>
       <img :src="require(`@/assets/images/${icon}`)" alt="" />
     </div>
   </div>
@@ -35,9 +35,13 @@ export default {
 .info-card {
   padding: 12px;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   .card-title {
-    font-family: "open-sans" !important;
+    font-size: 20px;
+    width: 75%;
   }
 
   .card-content {
@@ -45,7 +49,42 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 3rem;
+
+    span {
+      font-size: 48px;
+    }
+  }
+
+  @media (max-width: 2500px) {
+    .card-title {
+      font-size: 16px;
+    }
+
+    .card-content {
+      span {
+        font-size: 24px;
+      }
+
+      img {
+        width: 26px;
+      }
+    }
+  }
+
+  @media (max-width: 2000px) {
+    .card-title {
+      font-size: 14px;
+    }
+
+    .card-content {
+      span {
+        font-size: 16px;
+      }
+
+      img {
+        width: 18px;
+      }
+    }
   }
 }
 </style>

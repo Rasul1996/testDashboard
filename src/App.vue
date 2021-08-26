@@ -1,14 +1,13 @@
 <template>
   <div style="padding: 36px">
     <BaseHeader />
-    <div class="boxes">
+    <div class="boxes" style="margin-top: 35px">
       <FirstSide class="first-side" />
       <SecondSide class="second-side" />
       <ThirdSide class="third-side" />
     </div>
   </div>
 </template>
-
 <script>
 import BaseHeader from "@/components/BaseHeader.vue";
 import FirstSide from "./First.vue";
@@ -33,15 +32,15 @@ export default {
   justify-content: space-between;
 
   .first-side {
-    width: 22%;
+    width: 25%;
   }
 
   .second-side {
-    width: 38%;
+    width: 37%;
   }
 
   .third-side {
-    width: 38%;
+    width: 37%;
   }
 }
 </style>

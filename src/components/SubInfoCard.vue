@@ -1,10 +1,13 @@
 <template>
-  <div class="sub-info-card" :style="`background-color: ${color}`">
-    <div class="lhs">
-      <span class="sub-index">{{ index }}</span>
-      <span class="sub-title">{{ title }}</span>
+  <div
+    class="sub-info-card flex justify-between align-center"
+    :style="`background-color: ${color}`"
+  >
+    <div class="lhs flex align-center">
+      <span class="sub-index ff-open-sans-bold">{{ index }}</span>
+      <span class="sub-title ff-open-sans">{{ title }}</span>
     </div>
-    <span class="sub-info">{{ $formatNumber(info) }}</span>
+    <span class="sub-info ff-open-sans-bold">{{ $formatNumber(info) }}</span>
   </div>
 </template>
 
@@ -33,23 +36,54 @@ export default {
 
 <style lang="scss" scoped>
 .sub-info-card {
-  padding: 15px 10px;
+  font-size: 18px;
+  padding: 10px 15px;
   border-radius: 8px;
 
-  font-size: 1.15rem;
-
-  .sub-index,
-  .sub-info {
-    font-family: "open-sans-bold" !important;
+  .lhs {
+    span:last-child {
+      margin-left: 35px;
+    }
   }
 
-  .sub-title {
-    font-family: "open-sans" !important;
-    margin-left: 3rem;
+  @media (max-width: 2700px) {
+    font-size: 17px;
+
+    .lhs {
+      span:last-child {
+        margin-left: 31px;
+      }
+    }
   }
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @media (max-width: 2500px) {
+    font-size: 17px;
+
+    .lhs {
+      span:last-child {
+        margin-left: 26px;
+      }
+    }
+  }
+
+  @media (max-width: 2000px) {
+    font-size: 16px;
+
+    .lhs {
+      span:last-child {
+        margin-left: 24px;
+      }
+    }
+  }
+
+  @media (max-width: 1800px) {
+    font-size: 15px;
+
+    .lhs {
+      span:last-child {
+        margin-left: 20px;
+      }
+    }
+  }
 }
 </style>

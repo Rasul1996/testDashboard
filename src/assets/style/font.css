@@ -9,6 +9,11 @@
 }
 
 @font-face {
+    font-family: 'inter-medium';
+    src: url('../fonts/Inter-Medium.ttf') format('truetype')
+}
+
+@font-face {
     font-family: 'open-sans';
     src: url('../fonts/OpenSans-Regular.ttf') format('truetype')
 }

@@ -1,12 +1,21 @@
 <template>
   <div>
     <div class="flex gap">
-      <ContentCard :title="$t('totalNumberUsers')" :value="2412314" />
-      <ContentCard :title="$t('numberUsersToday')" :value="16441" />
+      <ContentCard
+        class="w-50"
+        :title="$t('totalNumberUsers')"
+        :value="2412314"
+      />
+      <ContentCard
+        class="w-50"
+        :title="$t('numberUsersToday')"
+        :value="16441"
+      />
     </div>
 
     <div class="flex gap mt-1">
       <GraphCard
+        class="w-50"
         :title="$t('femaleMaleRatio')"
         :firstKey="$t('male')"
         :firstValue="9321"
@@ -15,10 +24,9 @@
         firstColor="#5DCAED"
         secondColor="#FC4788"
         :id="3"
-        style="width: 50%"
       />
 
-      <SampleCard style="width: 50%" />
+      <SampleCard class="w-50" />
     </div>
   </div>
 </template>

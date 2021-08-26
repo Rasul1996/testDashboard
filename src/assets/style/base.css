@@ -14,14 +14,7 @@ body {
     color: var(--white);
 }
 
-.box-title {
-    font-size: 1.5rem;
-    color: var(--white);
-    font-family: 'inter-bold' !important;
-}
-
-.box-value {
-    font-size: 3rem;
+.ff-bold {
     color: var(--white);
     font-family: 'inter-bold' !important;
 }
@@ -32,6 +25,14 @@ body {
 
 .flex {
     display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
 }
 
 .gap {

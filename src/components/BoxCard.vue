@@ -1,9 +1,9 @@
 <template>
-  <div class="box">
-    <h3 class="box-title">{{ title }}</h3>
-    <div class="box-value" style="margin-top: 13px">
+  <div class="box box-card">
+    <span class="ff-medium">{{ title }}</span>
+    <h3 class="ff-bold mt-2">
       {{ $formatNumber(value) }}
-    </div>
+    </h3>
   </div>
 </template>
 
@@ -21,3 +21,26 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.box-card {
+  span {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 48px;
+  }
+
+  // @MEDIA
+  @media (max-width: 2500px) {
+    span {
+      font-size: 14px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+  }
+}
+</style>

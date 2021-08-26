@@ -3,10 +3,10 @@
     <div class="box">
       <h3 class="box-title">{{ $t("digitalInfo") }}</h3>
     </div>
-    <div style="margin-top: 0.5em">
+    <div class="mt-1">
       <DigitalTransforms />
     </div>
-    <div style="margin-top: 2.5em">
+    <div style="margin-top: 35px">
       <OneBilling />
     </div>
   </section>

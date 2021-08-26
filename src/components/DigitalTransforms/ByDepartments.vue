@@ -1,9 +1,5 @@
 <template>
   <div class="box">
-    <div class="box-info">
-      <h3 class="box-title">{{ $t("totalNumberByDEpartment") }}</h3>
-      <span class="bold">1641</span>
-    </div>
     <div class="info-cards" style="margin-top: 1.2em">
       <InfoCard
         class="single-card"
@@ -150,7 +146,7 @@ export default {
 
 <style scoped>
 .swiper {
-  height: 210px;
+  height: 160px;
 }
 </style>
 
@@ -159,10 +155,6 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  span {
-    font-size: 3rem;
-  }
 }
 
 .info-cards {

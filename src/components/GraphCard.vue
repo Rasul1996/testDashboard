@@ -15,9 +15,19 @@
         </p>
       </div>
     </div>
-    <div class="rhs">
-      <canvas :id="`pie-chart${id}`" width="180px" height="180px"></canvas>
-    </div>
+    <template v-if="isCanvasReady && !nextCanvas">
+      <div
+        class="rhs"
+        :style="`width: ${canvasWidth}; height: ${canvasHeight}`"
+      >
+        <canvas :id="`pie-chart${id}`"></canvas>
+      </div>
+    </template>
+    <template v-else>
+      <div class="rhs">
+        <canvas width="180px" height="180px" :id="`pie-chart${id}`"></canvas>
+      </div>
+    </template>
   </div>
 </template>
 
@@ -61,13 +71,37 @@ export default {
     },
   },
   mounted() {
-    this.setupChart();
+    if (window.innerWidth < 2400 && window.innerWidth >= 2000) {
+      this.canvasWidth = "241px";
+      this.canvasHeight = "auto";
+    } else if (window.innerWidth >= 2400 && window.innerWidth < 2750) {
+      this.canvasWidth = "300px";
+      this.canvasHeight = "auto";
+    } else {
+      this.nextCanvas = true;
+    }
+
+    this.isCanvasReady = true;
+
+    this.$nextTick(() => {
+      this.setupChart();
+    });
+  },
+
+  data() {
+    return {
+      isCanvasReady: false,
+      canvasWidth: "211px",
+      canvasHeight: "auto",
+      nextCanvas: false,
+    };
   },
 
   methods: {
     setupChart() {
       Chart.defaults.global.legend.display = false;
-      new Chart(document.getElementById(`pie-chart${this.id}`), {
+      // eslint-disable-next-line no-unused-vars
+      const chart = new Chart(document.getElementById(`pie-chart${this.id}`), {
         type: "pie",
         data: {
           labels: [this.firstKey, this.secondKey],
@@ -79,6 +113,8 @@ export default {
           ],
         },
       });
+
+      // chart.resize(130, 130)
     },
   },
 };
@@ -87,28 +123,78 @@ export default {
 <style lang="scss" scoped>
 .graph-card {
   display: flex;
+  max-width: 100%;
   .lhs {
     width: 50%;
     .title {
-      font-size: 1.25rem;
+      font-size: 20px;
       color: var(--white);
       font-family: "inter-bold" !important;
     }
 
     .info-key {
-      font-size: 1.125rem;
+      font-size: 18px;
       color: var(--white);
       font-family: "open-sans-bold" !important;
     }
 
     .info-value {
-      font-size: 3rem;
+      font-size: 48px;
       font-family: "open-sans-bold" !important;
+    }
+
+    @media (max-width: 2500px) {
+      .title {
+        font-size: 19px;
+      }
+
+      .info-key {
+        font-size: 17px;
+      }
+
+      .info-value {
+        font-size: 36px;
+      }
+    }
+    @media (max-width: 2000px) {
+      .title {
+        font-size: 18px;
+      }
+
+      .info-key {
+        font-size: 16px;
+      }
+
+      .info-value {
+        font-size: 28px;
+      }
+    }
+    @media (max-width: 1500px) {
+      .title {
+        font-size: 16px;
+      }
+
+      .info-key {
+        font-size: 15px;
+      }
+
+      .info-value {
+        font-size: 22px;
+      }
     }
   }
 
   .rhs {
     width: 50%;
   }
+
+  // @media (max-width: 2000px) {
+  //   flex-direction: column;
+
+  //   .lhs,
+  //   .rhs {
+  //     width: 100%;
+  //   }
+  // }
 }
 </style>
