@@ -32,15 +32,15 @@ export default {
   justify-content: space-between;
 
   .first-side {
-    width: 22%;
+    width: 25%;
   }
 
   .second-side {
-    width: 38%;
+    width: 37%;
   }
 
   .third-side {
-    width: 38%;
+    width: 37%;
   }
 }
 </style>

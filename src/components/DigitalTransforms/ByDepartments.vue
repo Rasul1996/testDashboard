@@ -120,7 +120,7 @@ export default {
       direction: "vertical",
       loop: true,
       autoplay: {
-        delay: 2500,
+        delay: 7500,
         disableOnInteraction: false,
       },
 

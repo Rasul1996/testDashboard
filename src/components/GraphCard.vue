@@ -15,9 +15,19 @@
         </p>
       </div>
     </div>
-    <div class="rhs">
-      <canvas :id="`pie-chart${id}`" width="180px" height="180px"></canvas>
-    </div>
+    <template v-if="isCanvasReady && !nextCanvas">
+      <div
+        class="rhs"
+        :style="`width: ${canvasWidth}; height: ${canvasHeight}`"
+      >
+        <canvas :id="`pie-chart${id}`"></canvas>
+      </div>
+    </template>
+    <template v-else>
+      <div class="rhs">
+        <canvas width="180px" height="180px" :id="`pie-chart${id}`"></canvas>
+      </div>
+    </template>
   </div>
 </template>
 
@@ -61,13 +71,37 @@ export default {
     },
   },
   mounted() {
-    this.setupChart();
+    if (window.innerWidth < 2400 && window.innerWidth >= 2000) {
+      this.canvasWidth = "241px";
+      this.canvasHeight = "auto";
+    } else if (window.innerWidth >= 2400 && window.innerWidth < 2750) {
+      this.canvasWidth = "300px";
+      this.canvasHeight = "auto";
+    } else {
+      this.nextCanvas = true;
+    }
+
+    this.isCanvasReady = true;
+
+    this.$nextTick(() => {
+      this.setupChart();
+    });
+  },
+
+  data() {
+    return {
+      isCanvasReady: false,
+      canvasWidth: "211px",
+      canvasHeight: "auto",
+      nextCanvas: false,
+    };
   },
 
   methods: {
     setupChart() {
       Chart.defaults.global.legend.display = false;
-      new Chart(document.getElementById(`pie-chart${this.id}`), {
+      // eslint-disable-next-line no-unused-vars
+      const chart = new Chart(document.getElementById(`pie-chart${this.id}`), {
         type: "pie",
         data: {
           labels: [this.firstKey, this.secondKey],
@@ -79,6 +113,8 @@ export default {
           ],
         },
       });
+
+      // chart.resize(130, 130)
     },
   },
 };
@@ -152,13 +188,13 @@ export default {
     width: 50%;
   }
 
-  @media (max-width: 2000px) {
-    flex-direction: column;
+  // @media (max-width: 2000px) {
+  //   flex-direction: column;
 
-    .lhs,
-    .rhs {
-      width: 100%;
-    }
-  }
+  //   .lhs,
+  //   .rhs {
+  //     width: 100%;
+  //   }
+  // }
 }
 </style>

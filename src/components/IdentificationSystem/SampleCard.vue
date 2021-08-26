@@ -1,10 +1,10 @@
 <template>
   <div class="box sample-box">
     <div class="sample-info">
-      <p class="sample-key">
+      <p class="sample-key ff-medium">
         {{ $t("numberIdPersonalAccount") }}
       </p>
-      <p class="sample-value">413 244</p>
+      <p class="sample-value ff-bold">{{ $formatNumber(413244) }}</p>
     </div>
     <div class="sample-logo">
       <img style="width: 100%" src="@/assets/images/OneID.svg" alt="" />
@@ -28,15 +28,11 @@ export default {};
     justify-content: space-between;
 
     .sample-key {
-      font-family: "inter-bold" !important;
-      font-size: 1.25rem;
-      line-height: 25px;
+      font-size: 20px;
     }
 
     .sample-value {
-      font-family: "inter-bold" !important;
-      font-size: 3rem;
-      line-height: 4rem;
+      font-size: 48px;
     }
   }
 
@@ -44,6 +40,38 @@ export default {};
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  @media (max-width: 2750px) {
+    .sample-info {
+      .sample-key {
+        font-size: 18px;
+      }
+
+      .sample-value {
+        font-size: 36px;
+      }
+    }
+
+    .sample-logo {
+      width: 176px;
+    }
+  }
+
+  @media (max-width: 2250px) {
+    .sample-info {
+      .sample-key {
+        font-size: 16px;
+      }
+
+      .sample-value {
+        font-size: 28px;
+      }
+    }
+
+    .sample-logo {
+      width: 156px;
+    }
   }
 }
 </style>
