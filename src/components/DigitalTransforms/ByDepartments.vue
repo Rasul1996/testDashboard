@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <div class="info-cards" style="margin-top: 1.2em">
+    <div class="info-cards">
       <InfoCard
         class="single-card"
         :title="$t('implemented')"
@@ -36,7 +36,7 @@
         </div>
       </div>
     </div>
-    <div class="swiper target4">
+    <div class="swiper target4" style="margin-top: 10px">
       <div class="swiper-wrapper">
         <div class="swiper-slide" v-for="item of danger" :key="item.id">
           <SubInfoCard
@@ -81,6 +81,7 @@ export default {
       // eslint-disable-next-line no-unused-vars
       const swiper = new Swiper(".target3", {
         slidesPerView: 2,
+        spaceBetween: 10,
         slidesPerGroup: 2,
         // Optional parameters
         direction: "vertical",
@@ -112,6 +113,7 @@ export default {
       const swiper = new Swiper(".target4", {
         slidesPerView: 2,
         slidesPerGroup: 2,
+        spaceBetween: 10,
         // Optional parameters
         direction: "vertical",
         loop: true,
@@ -143,7 +145,7 @@ export default {
 
 <style scoped>
 .swiper {
-  height: 86px;
+  height: 90px;
 }
 </style>
 

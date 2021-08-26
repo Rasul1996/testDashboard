@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <div class="info-cards" v-if="false">
+    <div class="info-cards">
       <InfoCard
         class="single-card"
         :title="$t('implemented')"
@@ -23,7 +23,7 @@
         color="rgba(235, 87, 87, 0.75)"
       />
     </div>
-    <div class="sub-info-cards">
+    <div class="sub-info-cards" style="margin-top: 1em">
       <div class="swiper target1">
         <div class="swiper-wrapper">
           <div class="swiper-slide" v-for="item of activeItems" :key="item.id">
@@ -39,7 +39,7 @@
           </div>
         </div>
       </div>
-      <div class="swiper target2">
+      <div class="swiper target2" style="margin-top: 5px">
         <div class="swiper-wrapper">
           <div class="swiper-slide" v-for="item of dangerItems" :key="item.id">
             <SubInfoCard
@@ -91,6 +91,7 @@ export default {
         slidesPerView: 2,
         direction: "vertical",
         slidesPerGroup: 2,
+        spaceBetween: 10,
         loop: true,
         autoplay: {
           delay: 6500,
@@ -114,6 +115,7 @@ export default {
         slidesPerView: 2,
         direction: "vertical",
         slidesPerGroup: 2,
+        spaceBetween: 10,
         loop: true,
         autoplay: {
           delay: 6500,
@@ -137,7 +139,7 @@ export default {
 
 <style scoped>
 .swiper {
-  height: 86px;
+  height: 90px;
 }
 </style>
 

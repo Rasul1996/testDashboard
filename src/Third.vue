@@ -7,8 +7,8 @@
     <div class="mt-1">
       <IdentificationSystem />
     </div>
-    <div class="mt-1">
-      <DataTable :items="items" />
+    <div class="mt-1">  
+      <DataTable :items="items" :title="$t('countByRegion')" />
     </div>
     <div style="margin-top: 35px">
       <IntegrationPlatform />

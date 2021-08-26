@@ -9,7 +9,7 @@
     </div>
 
     <div class="mt-1">
-      <DataTable :items="items" />
+      <DataTable :items="items" :title="$t('numberStatementsRegion')" />
     </div>
 
     <div class="box" style="margin-top: 35px">
@@ -85,31 +85,31 @@ export default {
           id: 1,
           key: this.$i18n.t("andijan"),
           value: 23179,
-          percent: 78,
+          percent: (23179 / 30_000) * 100,
         },
         {
           id: 2,
           key: this.$i18n.t("bukhara"),
           value: 27362,
-          percent: 67,
+          percent: (27362 / 30_000) * 100,
         },
         {
           id: 3,
           key: this.$i18n.t("jizzakh"),
           value: 15559,
-          percent: 56,
+          percent: (15559 / 30_000) * 100,
         },
         {
           id: 4,
           key: this.$i18n.t("kashkadarya"),
           value: 23530,
-          percent: 39,
+          percent: (23530 / 30_000) * 100,
         },
         {
           id: 5,
           key: this.$i18n.t("navoiy"),
           value: 11943,
-          percent: 29,
+          percent: (11943 / 30_000) * 100,
         },
         // {
         //   id: 6,

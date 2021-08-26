@@ -1,7 +1,7 @@
 <template>
   <div class="box">
     <div class="box-title" style="font-size: 20px">
-      {{ $t("numberStatementsRegion") }}
+      {{ title }}
     </div>
     <ul class="data-table">
       <li class="data-item" v-for="item of items" :key="item.id">
@@ -26,6 +26,10 @@ export default {
       type: Array,
       required: true,
     },
+    title: {
+      type: String,
+      required: true,
+    }
   },
 };
 </script>
