@@ -14,7 +14,6 @@
   <div class="flex gap mt-1">
     <GraphCard
       class="w-50"
-      :title="$t('claimsbelonging')"
       :firstKey="$t('phisicallyPersons')"
       :firstValue="physicalEntity"
       :secondKey="$t('legalEntities')"
@@ -52,7 +51,7 @@
       class="w-33"
       color="rgba(175, 116, 230, 0.5  )"
       :title="$t('numberMobileServiceEPIGU')"
-      :value="47"
+      :value="50"
     />
   </div>
 </template>
