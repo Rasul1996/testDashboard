@@ -7,7 +7,7 @@
     <div class="mt-1">
       <IdentificationSystem />
     </div>
-    <div class="mt-1">  
+    <div class="mt-1">
       <DataTable :items="items" :title="$t('countByRegion')" />
     </div>
     <div style="margin-top: 35px">
@@ -33,56 +33,68 @@ export default {
         {
           id: 1,
           key: this.$i18n.t("andijan"),
-          value: 1321,
-          percent: 78,
+          value: 54656,
+          percent: (54656 / 160_000) * 100,
         },
         {
           id: 2,
           key: this.$i18n.t("bukhara"),
-          value: 4432,
-          percent: 67,
+          value: 50032,
+          percent: (50032 / 160_000) * 100,
         },
         {
           id: 3,
           key: this.$i18n.t("jizzakh"),
-          value: 655,
-          percent: 56,
+          value: 32515,
+          percent: (32515 / 160_000) * 100,
         },
         {
           id: 4,
           key: this.$i18n.t("kashkadarya"),
-          value: 1321,
-          percent: 39,
+          value: 32515,
+          percent: (32515 / 160_000) * 100,
         },
         {
           id: 5,
           key: this.$i18n.t("navoiy"),
-          value: 4431,
-          percent: 29,
+          value: 32088,
+          percent: (32088 / 160_000) * 100,
         },
         {
           id: 6,
           key: this.$i18n.t("namangan"),
-          value: 6535,
-          percent: 35,
+          value: 51011,
+          percent: (51011 / 160_000) * 100,
         },
         {
           id: 7,
           key: this.$i18n.t("samarkand"),
-          value: 655,
-          percent: 31,
+          value: 66050,
+          percent: (66050 / 160_000) * 100,
         },
         {
           id: 8,
           key: this.$i18n.t("surkhandarya"),
-          value: 315,
-          percent: 28,
+          value: 31307,
+          percent: (31307 / 160_000) * 100,
         },
         {
           id: 9,
           key: this.$i18n.t("sirdarya"),
-          value: 255,
-          percent: 25,
+          value: 23020,
+          percent: (23020 / 160_000) * 100,
+        },
+        {
+          id: 10,
+          key: this.$i18n.t("tashkent"),
+          value: 152665,
+          percent: (152665 / 160_000) * 100,
+        },
+        {
+          id: 11,
+          key: this.$i18n.t("tashkentVil"),
+          value: 79660,
+          percent: (79660 / 160_000) * 100,
         },
       ],
     };

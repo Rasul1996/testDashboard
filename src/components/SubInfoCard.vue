@@ -3,15 +3,15 @@
     class="sub-info-card flex justify-between align-center"
     :style="`background-color: ${color}`"
   >
-    <div class="lhs flex align-center" style="width: 90%">
-      <div class="sub-index ff-open-sans-bold" style="width: 10%">
+    <div class="lhs flex align-center" style="width: 93%">
+      <div class="sub-index ff-open-sans-bold" style="width: 7%">
         {{ index }}
       </div>
-      <div class="sub-title ff-open-sans" style="width: 90%" :title="title">
+      <div class="sub-title ff-open-sans" style="width: 93%" :title="title">
         {{ title }}
       </div>
     </div>
-    <div class="sub-info ff-open-sans-bold" style="width: 10%">
+    <div class="sub-info ff-open-sans-bold" style="width: 7%; text-align: end">
       {{ $formatNumber(info) }}
     </div>
   </div>

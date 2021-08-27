@@ -3,7 +3,7 @@
     <div class="box-title" style="font-size: 20px">
       {{ title }}
     </div>
-    <ul class="data-table">
+    <ul class="data-table" style="margin-top: 10px">
       <li class="data-item" v-for="item of items" :key="item.id">
         <span class="item-key">{{ item.key }}</span>
         <div class="item-progress">
@@ -29,7 +29,7 @@ export default {
     title: {
       type: String,
       required: true,
-    }
+    },
   },
 };
 </script>

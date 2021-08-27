@@ -67,7 +67,7 @@ export default {
 .box-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 5px;
 
   .single-box-card {
     flex-grow: 1;

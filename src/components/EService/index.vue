@@ -66,27 +66,27 @@ export default {
     return {
       allApps: 33900000,
       usersCount: 580900,
-    }
+    };
   },
   mounted() {
     setInterval(() => {
       this.allApps += this.$randomInteger(1, 3);
       this.usersCount += this.$randomInteger(1, 3);
-    }, 15 * 1000)
+    }, 15 * 1000);
   },
   computed: {
     maleUsers() {
-      return Math.round((this.usersCount / 100) * 67)
+      return Math.round((this.usersCount / 100) * 67);
     },
     femaleUsers() {
-      return Math.round((this.usersCount / 100) * 33)
+      return Math.round((this.usersCount / 100) * 33);
     },
     physicalEntity() {
-      return Math.round((this.allApps / 100) / 92)
+      return Math.round(this.allApps / 100 / 92);
     },
     legalEntity() {
-      return Math.round((this.allApps / 100) / 8)
-    }
-  }
+      return Math.round(this.allApps / 100 / 8);
+    },
+  },
 };
 </script>
