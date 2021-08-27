@@ -30,7 +30,9 @@ export default {
     };
   },
   mounted() {
-    this.countUp = new CountUp(`number${this.id}`, this.value, { separator: ' ' });
+    this.countUp = new CountUp(`number${this.id}`, this.value, {
+      separator: " ",
+    });
     this.countUp.start();
   },
 };
