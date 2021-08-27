@@ -158,20 +158,28 @@ export default {
           hidden: true,
         },
         {
-          id: 12,
+          id: 13,
           key: this.$i18n.t("Karak"),
           value: 17446,
           percent: (17446 / 65_000) * 100,
           hidden: true,
+        },
+        {
+          id: 14,
+          key: this.$i18n.t("tashkentVil"),
+          value: 79660,
+          percent: (79660 / 160_000) * 100,
         },
       ],
     };
   },
   watch: {
     "$store.state.lastUpdateValue": function (value) {
+      const index = this.$randomInteger(0, 12);
       this.biggest += value;
-      this.items[1].value += value;
-      this.items[1].percent = (this.items[1].value / this.biggest) * 100;
+      this.items[index].value += value;
+      this.items[index].percent =
+        (this.items[index].value / this.biggest) * 100;
     },
   },
 };

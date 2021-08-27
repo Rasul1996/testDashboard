@@ -8,7 +8,12 @@
 
     <div class="flex mt-1">
       <div style="width: 31%; margin-right: 5px">
-        <BoxCard :id="77" :title="$t('numberResponces')" :value="todayQuery" />
+        <BoxCard
+          ref="box-88"
+          :id="77"
+          :title="$t('numberResponces')"
+          :value="todayQuery"
+        />
         <BoxCard
           :id="88"
           class="mt-1"
@@ -34,8 +39,9 @@ export default {
   },
   data() {
     return {
-      todayQuery: 0,
+      todayQuery: 856349,
       yesterdayQuery: 7601322,
+      queryValue: 0,
     };
   },
   mounted() {
@@ -48,10 +54,12 @@ export default {
       if (time < 9) {
         this.todayQuery = 856349;
       } else {
-        this.todayQuery = Math.round((this.yesterdayQuery / 24) * time);
+        this.queryValue = Math.round((this.yesterdayQuery / 24) * time);
+        this.$refs["box-88"].countUp.update(this.queryValue);
 
         setInterval(() => {
-          this.todayQuery += this.$randomInteger(2000, 3300);
+          this.queryValue += this.$randomInteger(2000, 3300);
+          this.$refs["box-88"].countUp.update(this.queryValue);
         }, 15000);
       }
     },
