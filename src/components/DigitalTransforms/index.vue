@@ -1,7 +1,7 @@
 <template>
   <div>
     <section>
-      <ContentCard :title="$t('totalByTerritories')" :value="1641" />
+      <ContentCard :title="$t('totalByTerritories')" :value="1421" />
       <ByRegions style="margin-top: 12px" />
     </section>
 

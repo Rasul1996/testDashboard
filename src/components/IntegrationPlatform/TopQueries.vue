@@ -55,8 +55,6 @@ export default {
     calculate() {
       const time = new Date().getHours();
 
-      console.log(time);
-
       if (time < 9) {
         this.items[0].value = 131715;
         this.items[1].value = 130073;

@@ -4,21 +4,21 @@
       <InfoCard
         class="single-card"
         :title="$t('implemented')"
-        info="783"
+        info="197"
         icon="check.svg"
         color="rgba(39, 174, 96, 0.75)"
       />
       <InfoCard
         class="single-card"
         :title="$t('during')"
-        info="112"
+        info="154"
         icon="Warning.svg"
         color="rgba(242, 153, 74, 0.75)"
       />
       <InfoCard
         class="single-card"
         :title="$t('notStarted')"
-        info="526"
+        info="132"
         icon="Time.svg"
         color="rgba(235, 87, 87, 0.75)"
       />

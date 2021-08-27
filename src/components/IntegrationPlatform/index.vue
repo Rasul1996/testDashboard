@@ -8,8 +8,9 @@
 
     <div class="flex mt-1">
       <div style="width: 31%; margin-right: 5px">
-        <BoxCard :title="$t('numberResponces')" :value="todayQuery" />
+        <BoxCard :id="77" :title="$t('numberResponces')" :value="todayQuery" />
         <BoxCard
+          :id="88"
           class="mt-1"
           :title="$t('numberResponcesYesterday')"
           :value="yesterdayQuery"
@@ -47,7 +48,7 @@ export default {
       if (time < 9) {
         this.todayQuery = 856349;
       } else {
-        this.todayQuery = 642517;
+        this.todayQuery = Math.round((this.yesterdayQuery / 24) * time);
 
         setInterval(() => {
           this.todayQuery += this.$randomInteger(2000, 3300);

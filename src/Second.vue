@@ -80,91 +80,99 @@ export default {
   },
   data() {
     return {
+      biggest: 65_000,
       items: [
         {
           id: 1,
           key: this.$i18n.t("andijan"),
           value: 23179,
-          percent: (23179 / 45_000) * 100,
+          percent: (23179 / 65_000) * 100,
         },
         {
           id: 2,
           key: this.$i18n.t("bukhara"),
           value: 27362,
-          percent: (27362 / 45_000) * 100,
+          percent: (27362 / 65_000) * 100,
         },
         {
           id: 3,
           key: this.$i18n.t("jizzakh"),
           value: 15559,
-          percent: (15559 / 45_000) * 100,
+          percent: (15559 / 65_000) * 100,
         },
         {
           id: 4,
           key: this.$i18n.t("kashkadarya"),
           value: 23530,
-          percent: (23530 / 45_000) * 100,
+          percent: (23530 / 65_000) * 100,
         },
         {
           id: 5,
           key: this.$i18n.t("navoiy"),
           value: 11943,
-          percent: (11943 / 45_000) * 100,
+          percent: (11943 / 65_000) * 100,
         },
         {
           id: 6,
           key: this.$i18n.t("namangan"),
           value: 23401,
-          percent: (23401 / 45_000) * 100,
+          percent: (23401 / 65_000) * 100,
         },
         {
           id: 7,
           key: this.$i18n.t("samarkand"),
           value: 44470,
-          percent: (44470 / 45_000) * 100,
+          percent: (44470 / 65_000) * 100,
         },
         {
           id: 8,
           key: this.$i18n.t("surkhandarya"),
           value: 10230,
-          percent: (10230 / 30_000) * 100,
+          percent: (10230 / 65_000) * 100,
         },
-        // {
-        //   id: 9,
-        //   key: this.$i18n.t("sirdarya"),
-        //   value: 5098,
-        //   percent: 25,
-        // },
-        // {
-        //   id: 10,
-        //   key: this.$i18n.t("tashkent"),
-        //   value: 62570,
-        //   percent: 25,
-        //   hidden: true
-        // },
-        // {
-        //   id: 11,
-        //   key: this.$i18n.t("fergana"),
-        //   value: 22362,
-        //   percent: 25,
-        //   hidden: true
-        // },
-        // {
-        //   id: 12,
-        //   key: this.$i18n.t("khorezm"),
-        //   value: 34512,
-        //   percent: 25,
-        //   hidden: true
-        // },
-        // {
-        //   id: 12,
-        //   key: this.$i18n.t("Karak"),
-        //   value: 17446,
-        //   percent: 25,
-        //   hidden: true
-        // },
+        {
+          id: 9,
+          key: this.$i18n.t("sirdarya"),
+          value: 5098,
+          percent: (5098 / 65_000) * 100,
+        },
+        {
+          id: 10,
+          key: this.$i18n.t("tashkent"),
+          value: 62570,
+          percent: (62570 / 65_000) * 100,
+          hidden: true,
+        },
+        {
+          id: 11,
+          key: this.$i18n.t("fergana"),
+          value: 22362,
+          percent: (22362 / 65_000) * 100,
+          hidden: true,
+        },
+        {
+          id: 12,
+          key: this.$i18n.t("khorezm"),
+          value: 34512,
+          percent: (34512 / 65_000) * 100,
+          hidden: true,
+        },
+        {
+          id: 12,
+          key: this.$i18n.t("Karak"),
+          value: 17446,
+          percent: (17446 / 65_000) * 100,
+          hidden: true,
+        },
       ],
     };
+  },
+  watch: {
+    "$store.state.lastUpdateValue": function (value) {
+      this.biggest += value;
+      this.items[1].value += value;
+      this.items[1].percent = (this.items[1].value / this.biggest) * 100;
+    },
   },
 };
 </script>

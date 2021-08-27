@@ -1,6 +1,10 @@
 <template>
   <div class="flex gap">
-    <ContentCard class="w-50" :title="$t('totalNumberApp')" :value="allApps" />
+    <ContentCard
+      class="w-50"
+      :title="$t('totalNumberApp')"
+      :value="$store.state.allApps"
+    />
     <ContentCard
       class="w-50"
       :title="$t('totalNumberUsers')"
@@ -64,13 +68,14 @@ export default {
   },
   data() {
     return {
-      allApps: 33900000,
       usersCount: 580900,
     };
   },
   mounted() {
     setInterval(() => {
-      this.allApps += this.$randomInteger(1, 3);
+      const apps = this.$randomInteger(1, 3);
+
+      this.$store.commit("SET_ALL_APPS", apps);
       this.usersCount += this.$randomInteger(1, 3);
     }, 15 * 1000);
   },
@@ -82,10 +87,10 @@ export default {
       return Math.round((this.usersCount / 100) * 33);
     },
     physicalEntity() {
-      return Math.round(this.allApps / 100 / 92);
+      return Math.round(this.$store.state.allApps / 100 / 92);
     },
     legalEntity() {
-      return Math.round(this.allApps / 100 / 8);
+      return Math.round(this.$store.state.allApps / 100 / 8);
     },
   },
 };

@@ -117,17 +117,13 @@ export default {
         options: {
           plugins: {
             datalabels: {
-              textStrokeColor: function() {
-                return 'red'
-              },
-              textStrokeWidth: function() {
-                return 5
-              },
-              color: function() {
-                return 'white'
-              },
+              color: "whitesmoke",
               formatter: function (value) {
                 return Math.round((value * 100) / fullCount) + "%";
+              },
+              font: {
+                weight: "bold",
+                size: 24,
               },
             },
           },

@@ -99,5 +99,12 @@ export default {
       ],
     };
   },
+  watch: {
+    "$store.state.lastUpdateValue": function (value) {
+      this.biggest += value;
+      this.items[1].value += value;
+      this.items[1].percent = (this.items[1].value / this.biggest) * 100;
+    },
+  },
 };
 </script>
