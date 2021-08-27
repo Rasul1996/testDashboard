@@ -16,14 +16,14 @@
 export default {
   data() {
     return {
-      count: 531738
-    }
+      count: 531738,
+    };
   },
   mounted() {
     setInterval(() => {
       this.count += this.$randomInteger(1, 3);
-    }, 15 * 1000)
-  }
+    }, 15 * 1000);
+  },
 };
 </script>
 

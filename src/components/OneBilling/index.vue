@@ -3,7 +3,7 @@
     <h3 class="box-title">{{ $t("unifiedBilling") }}</h3>
   </div>
 
-  <div class="box-cards">
+  <div class="box-cards mt-1">
     <BoxCard
       class="single-box-card"
       :title="$t('totalCountTransactions')"
@@ -65,10 +65,9 @@ export default {
 
 <style lang="scss" scoped>
 .box-cards {
-  margin-top: 4px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 5px;
 
   .single-box-card {
     flex-grow: 1;

@@ -2,12 +2,12 @@
   <div>
     <section>
       <ContentCard :title="$t('totalByTerritories')" :value="1641" />
-      <ByRegions class="mt-1" />
+      <ByRegions style="margin-top: 12px" />
     </section>
 
     <section class="mt-1">
       <ContentCard :title="$t('totalNumberByDeppartment')" :value="483" />
-      <ByDepartments class="mt-1" />
+      <ByDepartments style="margin-top: 12px" />
     </section>
   </div>
 </template>

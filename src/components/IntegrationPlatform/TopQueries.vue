@@ -96,7 +96,7 @@ export default {
 
 <style lang="scss" scoped>
 .top-info {
-  margin-top: 1.1em;
+  margin-top: 16px;
   .info-item {
     display: flex;
     justify-content: space-between;

@@ -72,8 +72,8 @@ export default {
   },
   data() {
     return {
-      activeItems: regions.filter(item => item.status === 1),
-      dangerItems: regions.filter(item => item.status === 3)
+      activeItems: regions.filter((item) => item.status === 1),
+      dangerItems: regions.filter((item) => item.status === 3),
     };
   },
   mounted() {
@@ -82,7 +82,7 @@ export default {
       this.initSwiper2();
     }, 200);
 
-    console.log(this.activeItems)
+    console.log(this.activeItems);
   },
   methods: {
     initSwiper() {
@@ -164,7 +164,7 @@ export default {
 
 .sub-info-cards {
   .single-sub-card {
-    margin-top: 5px;
+    margin-top: 4px;
   }
 }
 </style>

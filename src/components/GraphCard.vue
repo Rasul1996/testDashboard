@@ -32,8 +32,8 @@
 </template>
 
 <script>
-import Chart from "chart.js";
-
+// import Chart from "chart.js";
+/* eslint-disable no-undef */
 export default {
   props: {
     id: {
@@ -94,11 +94,13 @@ export default {
       canvasWidth: "211px",
       canvasHeight: "auto",
       nextCanvas: false,
+      fullCount: 0,
     };
   },
 
   methods: {
     setupChart() {
+      const fullCount = this.firstValue + this.secondValue;
       Chart.defaults.global.legend.display = false;
       // eslint-disable-next-line no-unused-vars
       const chart = new Chart(document.getElementById(`pie-chart${this.id}`), {
@@ -111,6 +113,24 @@ export default {
               data: [this.firstValue, this.secondValue],
             },
           ],
+        },
+        options: {
+          plugins: {
+            datalabels: {
+              textStrokeColor: function() {
+                return 'red'
+              },
+              textStrokeWidth: function() {
+                return 5
+              },
+              color: function() {
+                return 'white'
+              },
+              formatter: function (value) {
+                return Math.round((value * 100) / fullCount) + "%";
+              },
+            },
+          },
         },
       });
 
