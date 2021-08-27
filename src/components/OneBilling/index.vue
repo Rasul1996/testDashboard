@@ -56,41 +56,21 @@ export default {
 
   methods: {
     calculate() {
-      setTimeout(() => {
+      setInterval(() => {
         const a = this.$randomInteger(10, 20);
         const b = this.$randomInteger(200_000, 800_000);
-
-        this.$refs["box-1"].counter(
-          `number1`,
-          this.allTransaction,
-          this.allTransaction + a,
-          777
-        );
-        this.$refs["box-2"].counter(
-          `number2`,
-          this.todayTransaction,
-          this.todayTransaction + a,
-          777
-        );
-        this.$refs["box-3"].counter(
-          `number3`,
-          this.allSoumTransaction,
-          this.allSoumTransaction + b,
-          777
-        );
-        this.$refs["box-4"].counter(
-          `number4`,
-          this.todaySoumTransaction,
-          this.todaySoumTransaction + b,
-          777
-        );
 
         this.allTransaction += a;
         this.allSoumTransaction += b;
 
         this.todayTransaction += a;
         this.todaySoumTransaction += b;
-      }, 15000);
+
+        this.$refs["box-1"].countUp.update(this.allTransaction);
+        this.$refs["box-2"].countUp.update(this.todayTransaction);
+        this.$refs["box-3"].countUp.update(this.allSoumTransaction);
+        this.$refs["box-4"].countUp.update(this.allSoumTransaction);
+      }, 15 * 1000);
     },
   },
 };
