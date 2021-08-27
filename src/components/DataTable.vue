@@ -3,28 +3,23 @@
     <div class="box-title" style="font-size: 20px">
       {{ title }}
     </div>
-    <div class="swiper target77">
-      <ul class="swiper-wrapper data-table" style="margin-top: 18px">
-        <li class="swiper-slide" v-for="item of items" :key="item.id">
-          <span class="item-key">{{ item.key }}</span>
-          <div class="item-progress">
-            <div
-              :style="`width: ${item.percent}%`"
-              style="height: 8px"
-              class="data-progress"
-            ></div>
-          </div>
-          <span class="item-value" style="text-align: end">{{
-            item.value
-          }}</span>
-        </li>
-      </ul>
-    </div>
+    <ul class="data-table" style="margin-top: 18px">
+      <li class="data-item" v-for="item of items" :key="item.id">
+        <span class="item-key">{{ item.key }}</span>
+        <div class="item-progress">
+          <div
+            :style="`width: ${item.percent}%`"
+            style="height: 8px"
+            class="data-progress"
+          ></div>
+        </div>
+        <span class="item-value" style="text-align: end">{{ item.value }}</span>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
-/* eslint-disable no-undef */
 export default {
   props: {
     items: {
@@ -34,42 +29,6 @@ export default {
     title: {
       type: String,
       required: true,
-    },
-  },
-  mounted() {
-    this.initSwiper1();
-  },
-  methods: {
-    initSwiper1() {
-      // eslint-disable-next-line no-unused-vars
-      const swiper = new Swiper(".target77", {
-        slidesPerView: 2,
-        spaceBetween: 10,
-        slidesPerGroup: 2,
-        // Optional parameters
-        direction: "vertical",
-        loop: true,
-        autoplay: {
-          delay: 7500,
-          disableOnInteraction: false,
-        },
-
-        // If we need pagination
-        pagination: {
-          el: ".swiper-pagination",
-        },
-
-        // Navigation arrows
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-
-        // And if we need scrollbar
-        scrollbar: {
-          el: ".swiper-scrollbar",
-        },
-      });
     },
   },
 };
