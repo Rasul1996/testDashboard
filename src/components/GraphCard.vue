@@ -2,17 +2,19 @@
   <div class="box graph-card">
     <div class="lhs">
       <p class="title">{{ title }}</p>
-      <div style="margin-top: 16px">
-        <p class="info-key">{{ firstKey }}</p>
-        <p class="info-value" :style="`color: ${firstColor}`">
-          {{ $formatNumber(firstValue) }}
-        </p>
-      </div>
-      <div style="margin-top: 10px">
-        <p class="info-key">{{ secondKey }}</p>
-        <p class="info-value" :style="`color: ${secondColor}`">
-          {{ $formatNumber(secondValue) }}
-        </p>
+      <div style="display: flex; flex-direction: column; justify-content: space-evenly">
+        <div style="margin-top: 16px">
+          <p class="info-key">{{ firstKey }}</p>
+          <p class="info-value" :style="`color: ${firstColor}`">
+            {{ $formatNumber(firstValue) }}
+          </p>
+        </div>
+        <div style="margin-top: 10px">
+          <p class="info-key">{{ secondKey }}</p>
+          <p class="info-value" :style="`color: ${secondColor}`">
+            {{ $formatNumber(secondValue) }}
+          </p>
+        </div>
       </div>
     </div>
     <template v-if="isCanvasReady && !nextCanvas">
@@ -140,6 +142,7 @@ export default {
 .graph-card {
   display: flex;
   max-width: 100%;
+  min-height: 238px;
   .lhs {
     width: 50%;
     .title {

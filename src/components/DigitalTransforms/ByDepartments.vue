@@ -1,5 +1,5 @@
 <template>
-  <div class="box">
+  <div class="box" style="min-height: 347px">
     <div class="info-cards">
       <InfoCard
         class="single-card"
@@ -23,35 +23,38 @@
         color="rgba(235, 87, 87, 0.75)"
       />
     </div>
-    <div class="swiper target3" style="margin-top: 1em">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide" v-for="item of active" :key="item.id">
-          <SubInfoCard
-            class="single-sub-card"
-            :index="item.id"
-            :title="item.label"
-            :info="item.value"
-            :color="`rgba(82, 190, 128, 0.${10 - Math.round(item.value / 10)})`"
-          />
+    <div class="sub-info-cards">
+      <div class="swiper target3 mt-2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" v-for="item of active" :key="item.id">
+            <SubInfoCard
+              class="single-sub-card"
+              :index="item.id"
+              :title="item.label"
+              :info="item.value"
+              :color="`rgba(82, 190, 128, 0.${
+                10 - Math.round(item.value / 10)
+              })`"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="swiper target4" style="margin-top: 2px">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" v-for="item of danger" :key="item.id">
+            <SubInfoCard
+              class="single-sub-card"
+              :index="item.id"
+              :title="item.label"
+              :info="item.value"
+              :color="`rgba(239, 121, 121, 0.${
+                10 - Math.round(item.value / 10)
+              })`"
+            />
+          </div>
         </div>
       </div>
     </div>
-    <div class="swiper target4" style="margin-top: 10px">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide" v-for="item of danger" :key="item.id">
-          <SubInfoCard
-            class="single-sub-card"
-            :index="item.id"
-            :title="item.label"
-            :info="item.value"
-            :color="`rgba(239, 121, 121, 0.${
-              10 - Math.round(item.value / 10)
-            })`"
-          />
-        </div>
-      </div>
-    </div>
-    <div class="sub-info-cards"></div>
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="box">
+  <div class="box" style="min-height: 347px">
     <div class="info-cards">
       <InfoCard
         class="single-card"
@@ -23,7 +23,7 @@
         color="rgba(235, 87, 87, 0.75)"
       />
     </div>
-    <div class="sub-info-cards" style="margin-top: 1em">
+    <div class="sub-info-cards mt-2">
       <div class="swiper target1">
         <div class="swiper-wrapper">
           <div class="swiper-slide" v-for="item of activeItems" :key="item.id">
@@ -39,7 +39,7 @@
           </div>
         </div>
       </div>
-      <div class="swiper target2" style="margin-top: 5px">
+      <div class="swiper target2" style="margin-top: 2px">
         <div class="swiper-wrapper">
           <div class="swiper-slide" v-for="item of dangerItems" :key="item.id">
             <SubInfoCard

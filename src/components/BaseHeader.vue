@@ -10,7 +10,7 @@
       <div class="date-day">{{ date }}</div>
     </div>
     <div class="header-target">
-      <img src="@/assets/images/Union.svg" alt="" />
+      <img src="@/assets/images/Union2.svg" alt="" />
     </div>
   </header>
 </template>

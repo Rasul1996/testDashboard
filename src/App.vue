@@ -1,7 +1,7 @@
 <template>
   <div style="padding: 36px">
     <BaseHeader />
-    <div class="boxes" style="margin-top: 35px">
+    <div class="boxes" style="margin-top: 45px">
       <FirstSide class="first-side" />
       <SecondSide class="second-side" />
       <ThirdSide class="third-side" />

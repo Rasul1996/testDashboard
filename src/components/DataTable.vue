@@ -3,7 +3,7 @@
     <div class="box-title" style="font-size: 20px">
       {{ title }}
     </div>
-    <ul class="data-table" style="margin-top: 10px">
+    <ul class="data-table" style="margin-top: 18px">
       <li class="data-item" v-for="item of items" :key="item.id">
         <span class="item-key">{{ item.key }}</span>
         <div class="item-progress">
@@ -36,6 +36,7 @@ export default {
 
 <style lang="scss" scoped>
 .data-table {
+  min-height: 378px;
   .data-item {
     .data-progress {
       background-image: linear-gradient(
@@ -48,7 +49,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 14.5px 16px;
+    padding: 18px 16px;
     &:nth-child(odd) {
       background-color: var(--primary);
     }

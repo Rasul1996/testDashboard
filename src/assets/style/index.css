@@ -3,3 +3,15 @@
 @import url(./variables.css);
 @import url(./base.css);
 @import url(./basic.css);
+
+.mt-1 {
+    margin-top: 10px;
+}
+
+.mt-2 {
+    margin-top: 16px;
+}
+
+.mt-3 {
+    margin-top: 45px;
+}

@@ -26,7 +26,7 @@ export default createStore({
     SET_ALL_USERS(state, value) {
       state.lastupdateUserValue = value;
       state.allApps += value;
-    }
+    },
   },
   actions: {},
   modules: {},

@@ -30,7 +30,7 @@ export default {
     };
   },
   mounted() {
-    this.countUp = new CountUp(`number${this.id}`, this.value);
+    this.countUp = new CountUp(`number${this.id}`, this.value, { separator: ' ' });
     this.countUp.start();
   },
 };
@@ -38,12 +38,16 @@ export default {
 
 <style lang="scss" scoped>
 .box-card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 144px;
   span {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   h3 {
-    font-size: 48px;
+    font-size: 36px;
   }
 
   // @MEDIA

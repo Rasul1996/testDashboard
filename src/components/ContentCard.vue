@@ -40,7 +40,7 @@ export default {
   h3 {
     width: 45%;
     text-align: end;
-    font-size: 48px;
+    font-size: 42px;
   }
 
   // MEDIA

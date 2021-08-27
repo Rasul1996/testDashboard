@@ -6,7 +6,7 @@
     <div class="mt-1">
       <DigitalTransforms />
     </div>
-    <div style="margin-top: 35px">
+    <div class="mt-3">
       <OneBilling />
     </div>
   </section>

@@ -12,7 +12,7 @@
       <DataTable :items="items" :title="$t('numberStatementsRegion')" />
     </div>
 
-    <div class="box" style="margin-top: 35px">
+    <div class="box mt-3">
       <h3 class="box-title">{{ $t("EGovernmentProject") }}</h3>
     </div>
 
@@ -35,7 +35,7 @@
     </div>
 
     <div class="box mt-1">
-      <div style="font-size: 20px">
+      <div style="font-size: 16px">
         {{ $t("unified") }}
       </div>
       <div class="info-cards">
@@ -124,52 +124,52 @@ export default {
           value: 44470,
           percent: (44470 / 65_000) * 100,
         },
-        {
-          id: 8,
-          key: this.$i18n.t("surkhandarya"),
-          value: 10230,
-          percent: (10230 / 65_000) * 100,
-        },
-        {
-          id: 9,
-          key: this.$i18n.t("sirdarya"),
-          value: 5098,
-          percent: (5098 / 65_000) * 100,
-        },
-        {
-          id: 10,
-          key: this.$i18n.t("tashkent"),
-          value: 62570,
-          percent: (62570 / 65_000) * 100,
-          hidden: true,
-        },
-        {
-          id: 11,
-          key: this.$i18n.t("fergana"),
-          value: 22362,
-          percent: (22362 / 65_000) * 100,
-          hidden: true,
-        },
-        {
-          id: 12,
-          key: this.$i18n.t("khorezm"),
-          value: 34512,
-          percent: (34512 / 65_000) * 100,
-          hidden: true,
-        },
-        {
-          id: 13,
-          key: this.$i18n.t("Karak"),
-          value: 17446,
-          percent: (17446 / 65_000) * 100,
-          hidden: true,
-        },
-        {
-          id: 14,
-          key: this.$i18n.t("tashkentVil"),
-          value: 79660,
-          percent: (79660 / 160_000) * 100,
-        },
+        // {
+        //   id: 8,
+        //   key: this.$i18n.t("surkhandarya"),
+        //   value: 10230,
+        //   percent: (10230 / 65_000) * 100,
+        // },
+        // {
+        //   id: 9,
+        //   key: this.$i18n.t("sirdarya"),
+        //   value: 5098,
+        //   percent: (5098 / 65_000) * 100,
+        // },
+        // {
+        //   id: 10,
+        //   key: this.$i18n.t("tashkent"),
+        //   value: 62570,
+        //   percent: (62570 / 65_000) * 100,
+        //   hidden: true,
+        // },
+        // {
+        //   id: 11,
+        //   key: this.$i18n.t("fergana"),
+        //   value: 22362,
+        //   percent: (22362 / 65_000) * 100,
+        //   hidden: true,
+        // },
+        // {
+        //   id: 12,
+        //   key: this.$i18n.t("khorezm"),
+        //   value: 34512,
+        //   percent: (34512 / 65_000) * 100,
+        //   hidden: true,
+        // },
+        // {
+        //   id: 13,
+        //   key: this.$i18n.t("Karak"),
+        //   value: 17446,
+        //   percent: (17446 / 65_000) * 100,
+        //   hidden: true,
+        // },
+        // {
+        //   id: 14,
+        //   key: this.$i18n.t("tashkentVil"),
+        //   value: 79660,
+        //   percent: (79660 / 160_000) * 100,
+        // },
       ],
     };
   },
@@ -187,7 +187,7 @@ export default {
 
 <style lang="scss" scoped>
 .info-cards {
-  margin-top: 15px;
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
   gap: 4px;

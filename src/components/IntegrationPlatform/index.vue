@@ -15,8 +15,8 @@
           :value="todayQuery"
         />
         <BoxCard
+          style="margin-top: 4px"
           :id="88"
-          class="mt-1"
           :title="$t('numberResponcesYesterday')"
           :value="yesterdayQuery"
         />
