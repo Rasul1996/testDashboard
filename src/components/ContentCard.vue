@@ -1,13 +1,17 @@
 <template>
   <div class="box content-box" :style="{ background: color }">
-    <span class="ff-medium">{{ title }}</span>
-    <h3 class="ff-bold">{{ $formatNumber(value) }}</h3>
+    <span class="ff-medium" >{{ title }}</span>
+    <h3 class="ff-bold" :id="`content${id}`">{{ $formatNumber(value) }}</h3>
   </div>
 </template>
 
 <script>
 export default {
   props: {
+    id: {
+      type: Number,
+      required: true,
+    },
     color: {
       type: String,
       required: false,

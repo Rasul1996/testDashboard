@@ -11,13 +11,21 @@
       >
         <div style="margin-top: 16px">
           <p class="info-key">{{ firstKey }}</p>
-          <p class="info-value" :style="`color: ${firstColor}`">
+          <p
+            class="info-value"
+            :id="`key${firstKey}`"
+            :style="`color: ${firstColor}`"
+          >
             {{ $formatNumber(firstValue) }}
           </p>
         </div>
         <div style="margin-top: 10px">
           <p class="info-key">{{ secondKey }}</p>
-          <p class="info-value" :style="`color: ${secondColor}`">
+          <p
+            class="info-value"
+            :id="`key${secondKey}`"
+            :style="`color: ${secondColor}`"
+          >
             {{ $formatNumber(secondValue) }}
           </p>
         </div>
@@ -42,6 +50,8 @@
 <script>
 // import Chart from "chart.js";
 /* eslint-disable no-undef */
+import { CountUp } from "countup.js";
+
 export default {
   props: {
     id: {
@@ -79,6 +89,16 @@ export default {
     },
   },
   mounted() {
+    this.firstCountUp = new CountUp(`key${this.firstKey}`, this.firstValue, {
+      separator: " ",
+    });
+    this.firstCountUp.start();
+
+    this.secondCountUp = new CountUp(`key${this.firstKey}`, this.secondValue, {
+      separator: " ",
+    });
+    this.secondCountUp.start();
+
     if (window.innerWidth < 2400 && window.innerWidth >= 2000) {
       this.canvasWidth = "241px";
       this.canvasHeight = "auto";
@@ -98,6 +118,8 @@ export default {
 
   data() {
     return {
+      firstCountUp: null,
+      secondCountUp: null,
       isCanvasReady: false,
       canvasWidth: "211px",
       canvasHeight: "auto",

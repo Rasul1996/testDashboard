@@ -63,7 +63,7 @@ export default {
     sortedItems() {
       const newItems = this.items;
       return newItems.sort((a, b) => {
-        return a.percent >= b.percent;
+        return a.percent <= b.percent;
       });
     },
   },

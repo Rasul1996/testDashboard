@@ -4,7 +4,7 @@
       <ContentCard
         class="w-50"
         :title="$t('totalNumberUsers')"
-        :value="$store.state.oneIdUserCount"
+        :value="allUsersCount"
       />
       <ContentCard
         class="w-50"
@@ -42,5 +42,15 @@ export default {
     GraphCard,
     SampleCard,
   },
+  data() {
+    return {
+      allUsersCount: 1361613
+    }
+  },
+  mounted() {
+    setInterval(() => {
+      
+    }, 5555)
+  }
 };
 </script>

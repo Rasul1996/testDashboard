@@ -2,6 +2,7 @@
   <div class="box" style="min-height: 347px">
     <div class="info-cards">
       <InfoCard
+        :id="1"
         class="single-card"
         :title="$t('implemented')"
         :info="1169"
@@ -9,6 +10,7 @@
         color="rgba(39, 174, 96, 0.75)"
       />
       <InfoCard
+        :id="2"
         class="single-card"
         :title="$t('during')"
         :info="428"
@@ -16,6 +18,7 @@
         color="rgba(242, 153, 74, 0.75)"
       />
       <InfoCard
+        :id="3"
         class="single-card"
         :title="$t('notStarted')"
         :info="47"

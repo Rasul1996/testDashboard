@@ -180,7 +180,6 @@ export default {
   watch: {
     "$store.state.lastUpdateValue": function (value) {
       const index = this.$randomInteger(0, 13);
-      console.log(index);
 
       this.biggest += value;
       this.items[index].value += value;
