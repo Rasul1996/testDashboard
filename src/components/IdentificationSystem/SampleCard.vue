@@ -4,7 +4,7 @@
       <p class="sample-key ff-medium">
         {{ $t("numberIdPersonalAccount") }}
       </p>
-      <p class="sample-value ff-bold">{{ $formatNumber(count) }}</p>
+      <p class="sample-value ff-bold" id="sample-123"></p>
     </div>
     <div class="sample-logo">
       <img style="width: 100%" src="@/assets/images/OneID.svg" alt="" />
@@ -13,19 +13,25 @@
 </template>
 
 <script>
+import { CountUp } from "countup.js";
+
 export default {
   data() {
     return {
       count: 531738,
+      countUp: null
     };
   },
   mounted() {
+    this.countUp = new CountUp(`sample-123`, this.count, {
+      separator: " ",
+    });
+    this.countUp.start();
+
     setInterval(() => {
       this.count += this.$randomInteger(1, 3);
-
-      console.log("salom");
-      console.log(this.count);
-    }, 15 * 1000);
+      this.countUp.update(this.count)
+    }, 5 * 1000);
   },
 };
 </script>

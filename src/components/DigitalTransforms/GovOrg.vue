@@ -35,7 +35,7 @@
             :index="item.id"
             :title="item.label"
             :info="item.value"
-            :color="`rgba(82, 190, 128, 0.${10 - Math.round(item.value / 10)})`"
+            :color="`rgba(39, 174, 96, 0.75)`"
           />
         </div>
       </div>
@@ -48,9 +48,7 @@
             :index="item.id"
             :title="`${item.label}`"
             :info="item.value"
-            :color="`rgba( 247, 220, 111 , 0.${
-              10 - Math.round(item.value / 10)
-            })`"
+            :color="`rgba(242, 153, 74, 0.75)`"
           />
         </div>
       </div>
@@ -63,9 +61,7 @@
             :index="item.id"
             :title="item.label"
             :info="item.value"
-            :color="`rgba(239, 121, 121, 0.${
-              10 - Math.round(item.value / 10)
-            })`"
+            :color="`rgba(235, 87, 87, 0.75)`"
           />
         </div>
       </div>
@@ -100,7 +96,7 @@ export default {
       // eslint-disable-next-line no-unused-vars
       const swiper = new Swiper(".target5", {
         slidesPerView: 2,
-        spaceBetween: 10,
+        spaceBetween: 5,
         slidesPerGroup: 2,
         direction: "vertical",
         loop: true,
@@ -115,7 +111,7 @@ export default {
       const swiper = new Swiper(".target4", {
         slidesPerView: 2,
         slidesPerGroup: 2,
-        spaceBetween: 10,
+        spaceBetween: 5,
         direction: "vertical",
         loop: true,
         autoplay: {
@@ -130,7 +126,7 @@ export default {
         slidesPerView: 2,
         direction: "vertical",
         slidesPerGroup: 2,
-        spaceBetween: 10,
+        spaceBetween: 5,
         loop: true,
         autoplay: {
           delay: 7500,

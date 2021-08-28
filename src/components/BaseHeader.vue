@@ -2,7 +2,7 @@
   <header class="base-header">
     <div class="header-logo">
       <img src="@/assets/images/logo.svg" alt="" />
-      <span>{{ $t("EGovernmentCenter") }}</span>
+      <span>Elektron hukumat loyihalarini <br> boshqarish markazi</span>
     </div>
     <div class="header-date">
       <div class="date-time">{{ time }}</div>
@@ -81,7 +81,6 @@ export default {
   .header-logo {
     display: flex;
     align-items: center;
-    max-width: 30%;
     span {
       font-family: "inter-bold" !important;
       font-size: 26px;

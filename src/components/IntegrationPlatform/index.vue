@@ -22,7 +22,7 @@
         />
       </div>
       <div style="width: 69%">
-        <TopQueries />
+        <TopQueries ref="topQuery" />
       </div>
     </div>
   </div>
@@ -55,12 +55,18 @@ export default {
         this.todayQuery = 856349;
       } else {
         this.queryValue = Math.round((this.yesterdayQuery / 24) * time);
-        this.$refs["box-88"].countUp.update(this.queryValue);
+        this.$refs["box-88"]?.countUp?.update(this.queryValue);
 
         setInterval(() => {
-          this.queryValue += this.$randomInteger(2000, 3300);
-          this.$refs["box-88"].countUp.update(this.queryValue);
-        }, 15000);
+          const value = this.$randomInteger(2000, 3300);
+          this.queryValue += value;
+          this.$refs["box-88"]?.countUp?.update(this.queryValue);
+
+          const index = this.$randomInteger(0, 7);
+          if (index <= 4) {
+            this.$refs["topQuery"].items[index].value += value;
+          }
+        }, 5 * 1000);
       }
     },
   },

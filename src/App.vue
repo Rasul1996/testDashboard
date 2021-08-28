@@ -22,6 +22,16 @@ export default {
     SecondSide,
     ThirdSide,
   },
+  mounted() {
+    const time = new Date().getHours();
+
+    let value = 97;
+    if (time > 9) {
+      value = 241 * time;
+    }
+
+    this.$store.commit("SET_NEW_USERS", value);
+  },
 };
 </script>
 

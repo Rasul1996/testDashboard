@@ -1,16 +1,20 @@
 <template>
   <div class="box content-box" :style="{ background: color }">
-    <span class="ff-medium" >{{ title }}</span>
-    <h3 class="ff-bold" :id="`content${id}`">{{ $formatNumber(value) }}</h3>
+    <span class="ff-medium">{{ title }}</span>
+    <h3 class="ff-bold" :id="`content${id}`" v-if="id"></h3>
+
+    <h3 class="ff-bold" v-else>{{ $formatNumber(value) }}</h3>
   </div>
 </template>
 
 <script>
+import { CountUp } from "countup.js";
+
 export default {
   props: {
     id: {
       type: Number,
-      required: true,
+      required: false,
     },
     color: {
       type: String,
@@ -25,6 +29,29 @@ export default {
       type: Number,
       required: true,
     },
+  },
+
+  watch: {
+    value: function (v) {
+      if (this.id) {
+        this.countUp.update(v)
+      }
+    },
+  },
+
+  data() {
+    return {
+      countUp: null,
+    };
+  },
+
+  mounted() {
+    if (this.id) {
+      this.countUp = new CountUp(`content${this.id}`, this.value, {
+        separator: " ",
+      });
+      this.countUp.start();
+    }
   },
 };
 </script>
