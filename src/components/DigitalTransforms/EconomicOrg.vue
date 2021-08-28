@@ -25,7 +25,7 @@
     </div>
     <div class="sub-info-cards">
       <p style="text-align: center; font-size: 20px" class="mt-2">
-        Давлат ва хўжалик органларининг рақамлаштириш рейтинги
+        Хўжалик органларининг рақамлаштириш рейтинги
       </p>
 
       <div class="swiper target5 mt-2">
@@ -80,7 +80,7 @@
 <script>
 import InfoCard from "@/components/InfoCard.vue";
 import SubInfoCard from "@/components/SubInfoCard.vue";
-import ratings from "@/ratings.json";
+import ratings from "@/ecoratings.json";
 /* eslint-disable no-undef */
 export default {
   components: {

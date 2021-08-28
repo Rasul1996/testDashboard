@@ -28,7 +28,7 @@ import GovOrg from "./GovOrg.vue";
 import EconomicOrg from "./EconomicOrg.vue";
 const tabs = [
   {
-    label: "Давлар oрганлари",
+    label: "Давлат ўрганлари",
     value: "A",
   },
   {
