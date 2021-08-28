@@ -76,7 +76,7 @@ export default {
 
       this.$store.commit("SET_ALL_APPS", apps);
       this.usersCount += this.$randomInteger(1, 3);
-    }, 15 * 1000);
+    }, 1 * 1000);
   },
   computed: {
     maleUsers() {
@@ -86,10 +86,10 @@ export default {
       return Math.round((this.usersCount / 100) * 33);
     },
     physicalEntity() {
-      return Math.round(this.$store.state.allApps / 100 / 92);
+      return Math.round((this.$store.state.allApps / 100) * 92);
     },
     legalEntity() {
-      return Math.round(this.$store.state.allApps / 100 / 8);
+      return Math.round((this.$store.state.allApps / 100) * 8);
     },
   },
 };

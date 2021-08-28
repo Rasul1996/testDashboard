@@ -3,23 +3,43 @@
     <div class="box-title" style="font-size: 20px">
       {{ title }}
     </div>
-    <ul class="data-table" style="margin-top: 18px">
-      <li class="data-item" v-for="item of items" :key="item.id">
-        <span class="item-key">{{ item.key }}</span>
-        <div class="item-progress">
-          <div
-            :style="`width: ${item.percent}%`"
-            style="height: 8px"
-            class="data-progress"
-          ></div>
+    <!-- <div class="swiper target1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" v-for="item of sortedItems" :key="item.id">
+          <span>{{ item.value }}</span>
         </div>
-        <span class="item-value" style="text-align: end">{{ item.value }}</span>
-      </li>
-    </ul>
+      </div>
+    </div> -->
+    <div
+      class="swiper"
+      :class="`target${this.id} ${slidesPerView !== 7 ? 'swiper-big' : ''}`"
+    >
+      <ul class="swiper-wrapper data-table" style="margin-top: 18px">
+        <li
+          class="data-item swiper-slide"
+          v-for="item of sortedItems"
+          :key="item.id"
+        >
+          <span class="item-key">{{ item.key }}</span>
+          <div class="item-progress">
+            <div
+              :style="`width: ${item.percent}%`"
+              style="height: 8px"
+              class="data-progress"
+            ></div>
+          </div>
+          <span class="item-value" style="text-align: end">{{
+            item.value
+          }}</span>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
+/* eslint-disable no-undef */
+
 export default {
   props: {
     items: {
@@ -30,13 +50,57 @@ export default {
       type: String,
       required: true,
     },
+    slidesPerView: {
+      type: Number,
+      default: 7,
+    },
+    id: {
+      type: Number,
+      required: true,
+    },
+  },
+  computed: {
+    sortedItems() {
+      const newItems = this.items;
+      return newItems.sort((a, b) => {
+        console.log(a.value);
+        return a.value <= b.value;
+      });
+    },
+  },
+  mounted() {
+    this.initSwiper();
+  },
+  methods: {
+    initSwiper() {
+      new Swiper(`.target${this.id}`, {
+        slidesPerView: this.slidesPerView,
+        direction: "vertical",
+        spaceBetween: 5,
+        // loop: true,
+        autoplay: {
+          delay: 8000,
+          disableOnInteraction: true,
+        },
+      });
+    },
   },
 };
 </script>
 
+<style scoped>
+.swiper {
+  height: 460px;
+}
+
+.swiper-big {
+  height: 620px !important;
+}
+</style>
+
 <style lang="scss" scoped>
 .data-table {
-  min-height: 378px;
+  min-height: 500px !important;
   .data-item {
     .data-progress {
       background-image: linear-gradient(

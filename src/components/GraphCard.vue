@@ -2,7 +2,13 @@
   <div class="box graph-card">
     <div class="lhs">
       <p class="title">{{ title }}</p>
-      <div style="display: flex; flex-direction: column; justify-content: space-evenly">
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+        "
+      >
         <div style="margin-top: 16px">
           <p class="info-key">{{ firstKey }}</p>
           <p class="info-value" :style="`color: ${firstColor}`">

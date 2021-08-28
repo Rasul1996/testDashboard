@@ -1,12 +1,15 @@
 <template>
   <div>
     <section>
-      <ContentCard :title="$t('totalByTerritories')" :value="1421" />
+      <ContentCard :title="$t('totalByTerritories')" :value="1644" />
       <ByRegions class="mt-1" />
     </section>
 
     <section class="mt-1">
-      <ContentCard :title="$t('totalNumberByDeppartment')" :value="483" />
+      <ContentCard
+        :title="$t('Давлат ва ҳўжалик органлари, умумий')"
+        :value="446"
+      />
       <ByDepartments class="mt-1" />
     </section>
   </div>

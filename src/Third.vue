@@ -8,7 +8,12 @@
       <IdentificationSystem />
     </div>
     <div class="mt-1">
-      <DataTable :items="items" :title="$t('countByRegion')" />
+      <DataTable
+        :slidesPerView="9"
+        :id="88"
+        :items="items"
+        :title="$t('countByRegion')"
+      />
     </div>
     <div class="mt-3">
       <IntegrationPlatform />
@@ -86,42 +91,42 @@ export default {
           value: 50032,
           percent: (50032 / 160_000) * 100,
         },
-        // {
-        //   id: 10,
-        //   key: this.$i18n.t("Karak"),
-        //   value: 42262,
-        //   percent: (42262 / 160_000) * 100,
-        // },
-        // {
-        //   id: 11,
-        //   key: this.$i18n.t("jizzakh"),
-        //   value: 32515,
-        //   percent: (32515 / 160_000) * 100,
-        // },
-        // {
-        //   id: 12,
-        //   key: this.$i18n.t("navoiy"),
-        //   value: 32088,
-        //   percent: (32088 / 160_000) * 100,
-        // },
-        // {
-        //   id: 13,
-        //   key: this.$i18n.t("surkhandarya"),
-        //   value: 31307,
-        //   percent: (31307 / 160_000) * 100,
-        // },
-        // {
-        //   id: 14,
-        //   key: this.$i18n.t("sirdarya"),
-        //   value: 23020,
-        //   percent: (23020 / 160_000) * 100,
-        // },
+        {
+          id: 10,
+          key: this.$i18n.t("Karak"),
+          value: 42262,
+          percent: (42262 / 160_000) * 100,
+        },
+        {
+          id: 11,
+          key: this.$i18n.t("jizzakh"),
+          value: 32515,
+          percent: (32515 / 160_000) * 100,
+        },
+        {
+          id: 12,
+          key: this.$i18n.t("navoiy"),
+          value: 32088,
+          percent: (32088 / 160_000) * 100,
+        },
+        {
+          id: 13,
+          key: this.$i18n.t("surkhandarya"),
+          value: 31307,
+          percent: (31307 / 160_000) * 100,
+        },
+        {
+          id: 14,
+          key: this.$i18n.t("sirdarya"),
+          value: 23020,
+          percent: (23020 / 160_000) * 100,
+        },
       ],
     };
   },
   watch: {
     "$store.state.lastUpdateValue": function (value) {
-      const index = this.$randomInteger(0, 12);
+      const index = this.$randomInteger(0, 13);
       this.biggest += value;
       this.items[index].value += value;
       this.items[index].percent =

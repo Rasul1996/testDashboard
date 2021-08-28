@@ -23,8 +23,8 @@ export default {
     setInterval(() => {
       this.count += this.$randomInteger(1, 3);
 
-      console.log('salom')
-      console.log(this.count)
+      console.log("salom");
+      console.log(this.count);
     }, 15 * 1000);
   },
 };

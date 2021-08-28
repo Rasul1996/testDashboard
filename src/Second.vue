@@ -9,7 +9,11 @@
     </div>
 
     <div class="mt-1">
-      <DataTable :items="items" :title="$t('numberStatementsRegion')" />
+      <DataTable
+        :id="99"
+        :items="items"
+        :title="$t('numberStatementsRegion')"
+      />
     </div>
 
     <div class="box mt-3">
@@ -80,102 +84,104 @@ export default {
   },
   data() {
     return {
-      biggest: 65_000,
+      biggest: 100_000,
       items: [
         {
           id: 1,
           key: this.$i18n.t("andijan"),
           value: 23179,
-          percent: (23179 / 65_000) * 100,
+          percent: (23179 / 100_000) * 100,
         },
         {
           id: 2,
           key: this.$i18n.t("bukhara"),
           value: 27362,
-          percent: (27362 / 65_000) * 100,
+          percent: (27362 / 100_000) * 100,
         },
         {
           id: 3,
           key: this.$i18n.t("jizzakh"),
           value: 15559,
-          percent: (15559 / 65_000) * 100,
+          percent: (15559 / 100_000) * 100,
         },
         {
           id: 4,
           key: this.$i18n.t("kashkadarya"),
           value: 23530,
-          percent: (23530 / 65_000) * 100,
+          percent: (23530 / 100_000) * 100,
         },
         {
           id: 5,
           key: this.$i18n.t("navoiy"),
           value: 11943,
-          percent: (11943 / 65_000) * 100,
+          percent: (11943 / 100_000) * 100,
         },
         {
           id: 6,
           key: this.$i18n.t("namangan"),
           value: 23401,
-          percent: (23401 / 65_000) * 100,
+          percent: (23401 / 100_000) * 100,
         },
         {
           id: 7,
           key: this.$i18n.t("samarkand"),
           value: 44470,
-          percent: (44470 / 65_000) * 100,
+          percent: (44470 / 100_000) * 100,
         },
-        // {
-        //   id: 8,
-        //   key: this.$i18n.t("surkhandarya"),
-        //   value: 10230,
-        //   percent: (10230 / 65_000) * 100,
-        // },
-        // {
-        //   id: 9,
-        //   key: this.$i18n.t("sirdarya"),
-        //   value: 5098,
-        //   percent: (5098 / 65_000) * 100,
-        // },
-        // {
-        //   id: 10,
-        //   key: this.$i18n.t("tashkent"),
-        //   value: 62570,
-        //   percent: (62570 / 65_000) * 100,
-        //   hidden: true,
-        // },
-        // {
-        //   id: 11,
-        //   key: this.$i18n.t("fergana"),
-        //   value: 22362,
-        //   percent: (22362 / 65_000) * 100,
-        //   hidden: true,
-        // },
-        // {
-        //   id: 12,
-        //   key: this.$i18n.t("khorezm"),
-        //   value: 34512,
-        //   percent: (34512 / 65_000) * 100,
-        //   hidden: true,
-        // },
-        // {
-        //   id: 13,
-        //   key: this.$i18n.t("Karak"),
-        //   value: 17446,
-        //   percent: (17446 / 65_000) * 100,
-        //   hidden: true,
-        // },
-        // {
-        //   id: 14,
-        //   key: this.$i18n.t("tashkentVil"),
-        //   value: 79660,
-        //   percent: (79660 / 160_000) * 100,
-        // },
+        {
+          id: 8,
+          key: this.$i18n.t("surkhandarya"),
+          value: 10230,
+          percent: (10230 / 100_000) * 100,
+        },
+        {
+          id: 9,
+          key: this.$i18n.t("sirdarya"),
+          value: 5098,
+          percent: (5098 / 100_000) * 100,
+        },
+        {
+          id: 10,
+          key: this.$i18n.t("tashkent"),
+          value: 62570,
+          percent: (62570 / 100_000) * 100,
+          hidden: true,
+        },
+        {
+          id: 11,
+          key: this.$i18n.t("fergana"),
+          value: 22362,
+          percent: (22362 / 100_000) * 100,
+          hidden: true,
+        },
+        {
+          id: 12,
+          key: this.$i18n.t("khorezm"),
+          value: 34512,
+          percent: (34512 / 100_000) * 100,
+          hidden: true,
+        },
+        {
+          id: 13,
+          key: this.$i18n.t("Karak"),
+          value: 17446,
+          percent: (17446 / 100_000) * 100,
+          hidden: true,
+        },
+        {
+          id: 14,
+          key: this.$i18n.t("tashkentVil"),
+          value: 79660,
+          percent: (79660 / 100_000) * 100,
+        },
       ],
     };
   },
   watch: {
     "$store.state.lastUpdateValue": function (value) {
-      const index = this.$randomInteger(0, 12);
+      const index = this.$randomInteger(0, 13);
+      console.log(index);
+
       this.biggest += value;
       this.items[index].value += value;
       this.items[index].percent =

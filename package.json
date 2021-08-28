@@ -15,6 +15,7 @@
     "swiper": "^7.0.0",
     "vue": "^3.0.0",
     "vue-i18n": "^9.1.7",
+    "vue3-tabs": "^0.1.12",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {

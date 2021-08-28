@@ -10,7 +10,7 @@
       <div class="date-day">{{ date }}</div>
     </div>
     <div class="header-target">
-      <img src="@/assets/images/Union2.svg" alt="" />
+      <img width="354" height="118" src="@/assets/images/ATKRV.png" alt="" />
     </div>
   </header>
 </template>
@@ -113,6 +113,8 @@ export default {
   }
 
   .header-target {
+    width: 454px;
+    height: 118px;
     img {
       width: 100%;
       height: 100%;

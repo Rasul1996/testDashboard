@@ -1,54 +1,59 @@
 <template>
-  <div class="box" style="min-height: 347px">
-    <tabs v-model="selectedTab" class="tabs">
+  <div class="box" style="min-height: 347px" v-if="false">
+    <tabs v-model="selectedTab">
       <tab
-        class="content"
-        v-for="(tab, i) in tabs"
-        :key="`t${i}`"
-        :val="tab.value"
+        class="tab"
+        v-for="tab in tabs"
+        :key="`tab${tab.value}`"
+        :val="tab.valye"
         :label="tab.label"
         :indicator="true"
       />
     </tabs>
     <tab-panels v-model="selectedTab" :animate="true">
-      <tab-panel val="A">
+      <tab-panel :val="1">
         <GovOrg />
       </tab-panel>
-      <tab-panel val="B">
+      <tab-panel :val="2">
         <EconomicOrg />
       </tab-panel>
     </tab-panels>
   </div>
+  <test />
 </template>
 
 <script>
 import { Tabs, Tab, TabPanels, TabPanel } from "vue3-tabs";
 import { reactive, toRefs } from "vue";
+import test from "./test.vue";
+
 import GovOrg from "./GovOrg.vue";
 import EconomicOrg from "./EconomicOrg.vue";
+
 const tabs = [
   {
+    value: 1,
     label: "Давлар ўрганлари",
-    value: "A",
   },
   {
+    value: 2,
     label: "Хўжалик ўрганлари",
-    value: "B",
   },
 ];
 
 export default {
   components: {
+    test,
+    GovOrg,
+    EconomicOrg,
     Tabs,
     Tab,
     TabPanels,
     TabPanel,
-    GovOrg,
-    EconomicOrg,
   },
   setup() {
     const state = reactive({
-      selectedTab: tabs[0],
+      selectedTab: 2,
     });
     return {
       tabs,
@@ -58,28 +63,8 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.tabs {
-  display: flex;
-
-  .content {
-    padding: 0;
-    border: 0;
-    margin: 0;
-    cursor: pointer;
-
-    .tab {
-      padding: 0 !important;
-    }
-
-    &.active {
-      color: #5dcaed;
-    }
-
-    &:last-child {
-      margin-left: 1em;
-    }
-  }
-  margin-bottom: 1em;
+<style scoped>
+.tab {
+  padding: 10px 20px;
 }
 </style>
