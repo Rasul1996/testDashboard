@@ -28,11 +28,11 @@ import GovOrg from "./GovOrg.vue";
 import EconomicOrg from "./EconomicOrg.vue";
 const tabs = [
   {
-    label: "Давлар ўрганлари",
+    label: "Давлар oрганлари",
     value: "A",
   },
   {
-    label: "Хўжалик ўрганлари",
+    label: "Хўжалик oрганлари",
     value: "B",
   },
 ];

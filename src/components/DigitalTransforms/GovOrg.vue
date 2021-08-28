@@ -24,7 +24,7 @@
   </div>
   <div class="sub-info-cards">
     <p style="text-align: center; font-size: 20px" class="mt-2">
-      Давлат ва ҳўжалик органларининг рақамлаштириш рейтинги
+      Давлат ва хўжалик органларининг рақамлаштириш рейтинги
     </p>
 
     <div class="swiper target5 mt-2">

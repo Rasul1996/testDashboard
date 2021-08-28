@@ -7,7 +7,7 @@
 
     <section class="mt-1">
       <ContentCard
-        :title="$t('Давлат ва ҳўжалик органлари, умумий')"
+        :title="$t('Давлат ва хўжалик органлари, умумий')"
         :value="446"
       />
       <ByDepartments class="mt-1" />

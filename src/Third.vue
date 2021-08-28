@@ -9,7 +9,7 @@
     </div>
     <div class="mt-1">
       <DataTable
-        :slidesPerView="9"
+        :slidesPerView="14"
         :id="88"
         :items="items"
         :title="$t('countByRegion')"

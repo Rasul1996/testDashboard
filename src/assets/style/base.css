@@ -10,7 +10,7 @@ body {
 .box {
     border-radius: 8px;
     background-color: var(--secondary);
-    padding: 20px;
+    padding: 16px;
     color: var(--white);
 }
 

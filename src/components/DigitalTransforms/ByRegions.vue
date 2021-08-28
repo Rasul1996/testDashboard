@@ -25,7 +25,7 @@
     </div>
 
     <p style="text-align: center; font-size: 20px" class="mt-2">
-      Худудларнинг рақамлаштириш рейтинги
+      Ҳудудларнинг рақамлаштириш рейтинги
     </p>
 
     <div class="sub-info-cards mt-2">

@@ -43,7 +43,6 @@ export default {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  min-height: 144px;
   span {
     font-size: 18px;
   }

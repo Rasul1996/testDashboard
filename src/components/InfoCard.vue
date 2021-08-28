@@ -40,7 +40,7 @@ export default {
   justify-content: space-between;
 
   .card-title {
-    font-size: 20px;
+    font-size: 18px;
     width: 75%;
   }
 
@@ -51,7 +51,7 @@ export default {
     justify-content: space-between;
 
     span {
-      font-size: 48px;
+      font-size: 36px;
     }
   }
 

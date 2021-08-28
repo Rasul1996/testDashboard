@@ -11,8 +11,8 @@
       </div>
     </div> -->
     <div
-      class="swiper"
-      :class="`target${this.id} ${slidesPerView !== 7 ? 'swiper-big' : ''}`"
+      class="swiper mt-1"
+      :class="`target${this.id} ${slidesPerView == 10 ? '' : 'swiper-big'}`"
     >
       <ul class="swiper-wrapper data-table" style="margin-top: 18px">
         <li
@@ -52,7 +52,7 @@ export default {
     },
     slidesPerView: {
       type: Number,
-      default: 7,
+      default: 10,
     },
     id: {
       type: Number,
@@ -63,8 +63,7 @@ export default {
     sortedItems() {
       const newItems = this.items;
       return newItems.sort((a, b) => {
-        console.log(a.value);
-        return a.value <= b.value;
+        return a.percent >= b.percent;
       });
     },
   },
@@ -76,8 +75,7 @@ export default {
       new Swiper(`.target${this.id}`, {
         slidesPerView: this.slidesPerView,
         direction: "vertical",
-        spaceBetween: 5,
-        // loop: true,
+        spaceBetween: 0,
         autoplay: {
           delay: 8000,
           disableOnInteraction: true,
@@ -90,17 +88,21 @@ export default {
 
 <style scoped>
 .swiper {
-  height: 460px;
+  height: 610px !important;
 }
 
 .swiper-big {
-  height: 620px !important;
+  height: 695px !important;
+}
+
+.swiper-wrapper {
+  margin-top: 0px !important;
 }
 </style>
 
 <style lang="scss" scoped>
 .data-table {
-  min-height: 500px !important;
+  min-height: 400px !important;
   .data-item {
     .data-progress {
       background-image: linear-gradient(
@@ -113,7 +115,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 18px 16px;
+    padding: 0 16px;
     &:nth-child(odd) {
       background-color: var(--primary);
     }
