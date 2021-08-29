@@ -34,7 +34,7 @@ export default {
   watch: {
     value: function (v) {
       if (this.id) {
-        this.countUp.update(v)
+        this.countUp.update(v);
       }
     },
   },

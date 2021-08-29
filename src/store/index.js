@@ -8,7 +8,7 @@ export default createStore({
     lastUpdateValue: 0,
 
     // allUsers: 1361613,
-    allUsers: 795432,
+    allUsers: 795432 + 570_000,
     newUsers: 0,
     lastNewUserCount: 0,
 

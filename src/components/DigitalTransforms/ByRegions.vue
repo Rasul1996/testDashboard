@@ -79,10 +79,10 @@
 import InfoCard from "@/components/InfoCard.vue";
 import SubInfoCard from "@/components/SubInfoCard.vue";
 
-  // import { Swiper, SwiperSlide } from 'swiper/vue/swiper.js';
+// import { Swiper, SwiperSlide } from 'swiper/vue/swiper.js';
 
-  // Import Swiper styles
-  // import 'swiper/css';
+// Import Swiper styles
+// import 'swiper/css';
 /* eslint-disable no-undef */
 
 import regions from "@/regions.json";

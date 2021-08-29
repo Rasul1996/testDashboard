@@ -19,7 +19,7 @@ export default {
   data() {
     return {
       count: 531738,
-      countUp: null
+      countUp: null,
     };
   },
   mounted() {
@@ -30,7 +30,7 @@ export default {
 
     setInterval(() => {
       this.count += this.$randomInteger(1, 3);
-      this.countUp.update(this.count)
+      this.countUp.update(this.count);
     }, 5 * 1000);
   },
 };
