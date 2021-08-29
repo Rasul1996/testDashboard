@@ -33,11 +33,11 @@ import EconomicOrg from "./EconomicOrg.vue";
 const tabs = [
   {
     value: 1,
-    label: "Давлат ўрганлари",
+    label: "Давлат oрганлари",
   },
   {
     value: 2,
-    label: "Хўжалик ўрганлари",
+    label: "Хўжалик oрганлари",
   },
 ];
 

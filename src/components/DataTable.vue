@@ -62,9 +62,7 @@ export default {
   computed: {
     sortedItems() {
       const newItems = this.items;
-      return newItems.sort((a, b) => {
-        return a.percent <= b.percent;
-      });
+      return newItems.sort((a, b) => b.value - a.value);
     },
   },
   mounted() {
@@ -121,14 +119,16 @@ export default {
     }
 
     .item-key {
-      width: 20%;
+      width: 25%;
+      font-size: 21px;
     }
 
     .item-progress {
-      width: 70%;
+      width: 65%;
     }
 
     .item-value {
+      font-size: 21px;
       width: 10%;
     }
 

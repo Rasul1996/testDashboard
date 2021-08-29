@@ -1,6 +1,8 @@
 <template>
   <div class="flex gap">
     <ContentCard
+      :id="963257"
+      ref="content-1"
       class="w-50"
       :title="$t('totalNumberApp')"
       :value="$store.state.allApps"
@@ -18,8 +20,8 @@
       :firstValue="physicalEntity"
       :secondKey="$t('legalEntities')"
       :secondValue="legalEntity"
-      firstColor="#F17459"
-      secondColor="#51D7E0"
+      firstColor="#5DCAED"
+      secondColor="#FC4788"
       :id="1"
     />
     <GraphCard
@@ -67,6 +69,7 @@ export default {
   },
   data() {
     return {
+      allApps: this.$store.state.allApps,
       usersCount: 580900,
     };
   },
@@ -76,7 +79,7 @@ export default {
 
       this.$store.commit("SET_ALL_APPS", apps);
       this.usersCount += this.$randomInteger(1, 3);
-    }, 1 * 1000);
+    }, 5 * 1111);
   },
   computed: {
     maleUsers() {

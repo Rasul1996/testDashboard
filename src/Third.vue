@@ -34,6 +34,10 @@ export default {
   },
   data() {
     return {
+      array: [
+        0, 1, 2, 3, 0, 4, 0, 5, 1, 6, 0, 7, 2, 8, 0, 9, 1, 10, 0, 11, 2, 12, 3,
+        13, 1,
+      ],
       items: [
         {
           id: 1,
@@ -125,8 +129,9 @@ export default {
     };
   },
   watch: {
-    "$store.state.lastUpdateValue": function (value) {
-      const index = this.$randomInteger(0, 13);
+    "$store.state.lastNewUserCount": function (value) {
+      const index = this.array[this.$randomInteger(0, 24)];
+
       this.biggest += value;
       this.items[index].value += value;
       this.items[index].percent =

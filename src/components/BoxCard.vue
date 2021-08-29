@@ -2,7 +2,7 @@
   <div class="box box-card">
     <span class="ff-medium">{{ title }}</span>
     <h3 class="ff-bold mt-2" :id="`number${id}`">
-      {{ $formatNumber(value) }}
+      <!-- {{ $formatNumber(value) }} -->
     </h3>
   </div>
 </template>

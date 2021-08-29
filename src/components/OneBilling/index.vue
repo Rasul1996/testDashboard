@@ -70,7 +70,7 @@ export default {
         this.$refs["box-2"].countUp.update(this.todayTransaction);
         this.$refs["box-3"].countUp.update(this.allSoumTransaction);
         this.$refs["box-4"].countUp.update(this.todaySoumTransaction);
-      }, 15 * 1000);
+      }, 6 * 1000);
     },
   },
 };

@@ -40,14 +40,12 @@
               :index="item.id"
               :title="`${item.region} ${item.district}`"
               :info="item.rating"
-              :color="`rgba(82, 190, 128, 0.${
-                10 - Math.round(item.rating / 10)
-              })`"
+              :color="`rgba(39, 174, 96, 0.75)`"
             />
           </div>
         </div>
       </div>
-      <div class="swiper target3" style="margin-top: 2px">
+      <div class="swiper target3" style="margin-top: 5px">
         <div class="swiper-wrapper">
           <div class="swiper-slide" v-for="item of warningItems" :key="item.id">
             <SubInfoCard
@@ -55,14 +53,12 @@
               :index="item.id"
               :title="`${item.region} ${item.district}`"
               :info="item.rating"
-              :color="`rgba( 247, 220, 111 , 0.${
-                10 - Math.round(item.rating / 10)
-              })`"
+              :color="`rgba(242, 153, 74, 0.75)`"
             />
           </div>
         </div>
       </div>
-      <div class="swiper target2" style="margin-top: 2px">
+      <div class="swiper target2" style="margin-top: 5px">
         <div class="swiper-wrapper">
           <div class="swiper-slide" v-for="item of dangerItems" :key="item.id">
             <SubInfoCard
@@ -70,9 +66,7 @@
               :index="item.id"
               :title="`${item.region} ${item.district}`"
               :info="item.rating"
-              :color="`rgba(239, 121, 121, 0.${
-                10 - Math.round(item.rating / 10)
-              })`"
+              :color="`rgba(235, 87, 87, 0.75)`"
             />
           </div>
         </div>
@@ -119,7 +113,7 @@ export default {
         slidesPerView: 2,
         direction: "vertical",
         slidesPerGroup: 2,
-        spaceBetween: 10,
+        spaceBetween: 5,
         loop: true,
         autoplay: {
           delay: 6500,
@@ -133,7 +127,7 @@ export default {
         slidesPerView: 2,
         direction: "vertical",
         slidesPerGroup: 2,
-        spaceBetween: 10,
+        spaceBetween: 5,
         loop: true,
         autoplay: {
           delay: 6500,
@@ -147,7 +141,7 @@ export default {
         slidesPerView: 2,
         direction: "vertical",
         slidesPerGroup: 2,
-        spaceBetween: 10,
+        spaceBetween: 5,
         loop: true,
         autoplay: {
           delay: 6500,

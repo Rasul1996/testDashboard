@@ -1,5 +1,5 @@
 {
-    "EGovernmentCenter": "Электрон ҳукумат лойиҳаларини бошқариш маркази",
+    "EGovernmentCenter": "Elektron hukumat loyihalarini boshqarish markazi",
     "digitalInfo": "Рақамли трансформация",
     "totalByTerritories":"Ҳудудлар бўйича, умумий",
     "implemented": "Бажарилди",
@@ -37,6 +37,12 @@
     "numberResponces": "Сўровлар сони, бугун",
     "numberResponcesYesterday": "Сўровлар сони, кеча",
     "numberStatementsRegion": "Аризаларнинг ҳудудлар бўйича сони",
+
+    "tashkent": "Тoшкент",
+    "fergana": "Фарғона",
+    "khorezm": "Хоразм",
+    "Karak": "Қорақалпоғистон Республикаси",
+    
     "andijan": "Андижон",
     "bukhara": "Бухоро",
     "jizzakh": "Жиззах",
@@ -47,6 +53,7 @@
     "surkhandarya": "Сурхондарё",
     "sirdarya": "Сирдарё",
     "tashkentVil": "Тошкент вилояти",
+    
     "top5Recipients": "Сўровлар бўйича Топ-5 талик",
     "employementCertificate": "Туғилиш тўғрисидаги маълумотлар (ДХА)",
     "infoOnFirm": "Юридик шахс солиқ қарзи мавжудлиги (Давлат солиқ қўмитаси",

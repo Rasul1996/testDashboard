@@ -2,14 +2,16 @@
   <div>
     <div class="flex gap">
       <ContentCard
+        :id="101"
         class="w-50"
         :title="$t('totalNumberUsers')"
-        :value="allUsersCount"
+        :value="$store.state.allUsers"
       />
       <ContentCard
+        :id="102"
         class="w-50"
         :title="$t('numberUsersToday')"
-        :value="$store.state.oneIdUserCountToday"
+        :value="$store.state.newUsers"
       />
     </div>
 
@@ -42,15 +44,12 @@ export default {
     GraphCard,
     SampleCard,
   },
-  data() {
-    return {
-      allUsersCount: 1361613
-    }
-  },
   mounted() {
     setInterval(() => {
-      
-    }, 5555)
-  }
+      const value = this.$randomInteger(1, 3);
+
+      this.$store.commit("SET_NEW_USERS", value);
+    }, 5 * 1000);
+  },
 };
 </script>
