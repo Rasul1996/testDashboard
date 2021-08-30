@@ -2,7 +2,10 @@
   <header class="base-header">
     <div class="header-logo">
       <img src="@/assets/images/logo.svg" alt="" />
-      <span>Elektron hukumat loyihalarini <br> boshqarish markazi</span>
+      <span
+        >Elektron hukumat loyihalarini <br />
+        boshqarish markazi</span
+      >
     </div>
     <div class="header-date">
       <div class="date-time">{{ time }}</div>

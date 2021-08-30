@@ -10,10 +10,10 @@
   "dependencies": {
     "chart.js": "^2.7.2",
     "chartjs-plugin-datalabels": "^2.0.0",
-    "core-js": "^3.6.5",
+    "core-js": "^3.16.3",
     "countup.js": "^2.0.8",
-    "swiper": "^7.0.0",
-    "vue": "^3.0.0",
+    "swiper": "^7.0.1",
+    "vue": "^3.2.6",
     "vue-i18n": "^9.1.7",
     "vue3-tabs": "^0.1.12",
     "vuex": "^4.0.0-0"
@@ -23,14 +23,14 @@
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-vuex": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/compiler-sfc": "^3.2.6",
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-vue": "^7.0.0",
+    "eslint-plugin-vue": "^7.17.0",
     "prettier": "^2.2.1",
-    "sass": "^1.26.5",
+    "sass": "^1.38.2",
     "sass-loader": "^8.0.2"
   }
 }

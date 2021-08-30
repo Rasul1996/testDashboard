@@ -64,7 +64,7 @@ export default {
 
   .content {
     padding: 0;
-    border: 0;
+    border: 0 !important;
     margin: 0;
     cursor: pointer;
 
