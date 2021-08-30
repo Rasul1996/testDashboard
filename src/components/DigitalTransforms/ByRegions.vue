@@ -27,7 +27,7 @@
       />
     </div>
 
-    <p style="text-align: center; font-size: 20px" class="mt-2">
+    <p style="font-size: 20px" class="mt-2">
       Ҳудудларнинг рақамлаштириш рейтинги
     </p>
 

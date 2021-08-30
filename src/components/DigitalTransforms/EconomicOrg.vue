@@ -4,27 +4,27 @@
       <InfoCard
         class="single-card"
         :title="$t('implemented')"
-        :info="195"
+        :info="17"
         icon="check.svg"
         color="rgba(39, 174, 96, 0.75)"
       />
       <InfoCard
         class="single-card"
         :title="$t('during')"
-        :info="228"
+        :info="12"
         icon="Warning.svg"
         color="rgba(242, 153, 74, 0.75)"
       />
       <InfoCard
         class="single-card"
         :title="$t('notStarted')"
-        :info="23"
+        :info="16"
         icon="Time.svg"
         color="rgba(235, 87, 87, 0.75)"
       />
     </div>
     <div class="sub-info-cards">
-      <p style="text-align: center; font-size: 20px" class="mt-2">
+      <p style="font-size: 20px" class="mt-2">
         Хўжалик органларининг рақамлаштириш рейтинги
       </p>
 

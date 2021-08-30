@@ -26,7 +26,6 @@
     />
     <GraphCard
       class="w-50"
-      :title="$t('generalStatisticsUsers')"
       :firstKey="$t('male')"
       :firstValue="maleUsers"
       :secondKey="$t('female')"
@@ -39,7 +38,7 @@
   <div class="flex mt-1" style="gap: 4px">
     <ContentCard
       class="w-33"
-      :value="265"
+      :value="267"
       color="rgba(89, 153, 241, 0.5)"
       :title="$t('numberServicesImplemented')"
     />
@@ -47,7 +46,7 @@
       class="w-33"
       :title="$t('numberNewService')"
       color="rgba(82, 190, 128, 0.5)"
-      :value="47"
+      :value="49"
     />
     <ContentCard
       class="w-33"
@@ -70,7 +69,7 @@ export default {
   data() {
     return {
       allApps: this.$store.state.allApps,
-      usersCount: 580900,
+      usersCount: 595000,
     };
   },
   mounted() {

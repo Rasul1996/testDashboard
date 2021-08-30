@@ -25,7 +25,7 @@
         class="w-50"
         :title="$t('numberOpenDataSets')"
         logo="Group.svg"
-        :value="650"
+        :value="13196"
         color="#3D61A0"
       />
       <DataCard

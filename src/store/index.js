@@ -4,7 +4,7 @@ export default createStore({
   state: {
     oneIdUserCount: 1361613,
     oneIdUserCountToday: 241,
-    allApps: 33900000,
+    allApps: 34300000,
     lastUpdateValue: 0,
 
     // allUsers: 1361613,

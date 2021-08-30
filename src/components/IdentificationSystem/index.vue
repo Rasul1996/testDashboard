@@ -18,7 +18,6 @@
     <div class="flex gap mt-1">
       <GraphCard
         class="w-50"
-        :title="$t('generalStatisticsUsers')"
         :firstKey="$t('male')"
         :firstValue="$store.getters.getMaleUsers"
         :secondKey="$t('female')"
