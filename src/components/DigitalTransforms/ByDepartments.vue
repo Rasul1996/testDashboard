@@ -1,6 +1,29 @@
 <template>
   <div class="box" style="min-height: 347px">
-    <tabs v-model="selectedTab" class="tabs">
+    <div class="info-cards">
+      <InfoCard
+        class="single-card"
+        :title="$t('implemented')"
+        :info="195"
+        icon="check.svg"
+        color="rgba(39, 174, 96, 0.75)"
+      />
+      <InfoCard
+        class="single-card"
+        :title="$t('during')"
+        :info="228"
+        icon="Warning.svg"
+        color="rgba(242, 153, 74, 0.75)"
+      />
+      <InfoCard
+        class="single-card"
+        :title="$t('notStarted')"
+        :info="23"
+        icon="Time.svg"
+        color="rgba(235, 87, 87, 0.75)"
+      />
+    </div>
+    <tabs v-model="selectedTab" class="tabs mt-2">
       <tab
         class="content"
         v-for="(tab, i) in tabs"
@@ -10,6 +33,7 @@
         :indicator="true"
       />
     </tabs>
+
     <tab-panels v-model="selectedTab" :animate="true">
       <tab-panel val="A">
         <GovOrg />
@@ -26,6 +50,8 @@ import { Tabs, Tab, TabPanels, TabPanel } from "vue3-tabs";
 import { reactive, toRefs } from "vue";
 import GovOrg from "./GovOrg.vue";
 import EconomicOrg from "./EconomicOrg.vue";
+import InfoCard from "@/components/InfoCard.vue";
+
 const tabs = [
   {
     label: "Давлат oрганлари",
@@ -45,6 +71,7 @@ export default {
     TabPanel,
     GovOrg,
     EconomicOrg,
+    InfoCard
   },
   setup() {
     const state = reactive({
@@ -57,6 +84,34 @@ export default {
   },
 };
 </script>
+
+
+<style lang="scss" scoped>
+.box-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+
+  .single-card {
+    flex-grow: 1;
+    width: 30%;
+  }
+}
+
+.sub-info-cards {
+  .single-sub-card {
+    margin-top: 5px;
+  }
+}
+</style>
+
 
 <style lang="scss">
 .tabs {

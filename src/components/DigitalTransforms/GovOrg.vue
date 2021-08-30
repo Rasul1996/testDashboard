@@ -1,27 +1,4 @@
 <template>
-  <div class="info-cards">
-    <InfoCard
-      class="single-card"
-      :title="$t('implemented')"
-      :info="23"
-      icon="check.svg"
-      color="rgba(39, 174, 96, 0.75)"
-    />
-    <InfoCard
-      class="single-card"
-      :title="$t('during')"
-      :info="14"
-      icon="Warning.svg"
-      color="rgba(242, 153, 74, 0.75)"
-    />
-    <InfoCard
-      class="single-card"
-      :title="$t('notStarted')"
-      :info="17"
-      icon="Time.svg"
-      color="rgba(235, 87, 87, 0.75)"
-    />
-  </div>
   <div class="sub-info-cards">
     <p style="font-size: 20px" class="mt-2">
       Давлат органларининг рақамлаштириш рейтинги
@@ -70,13 +47,11 @@
 </template>
 
 <script>
-import InfoCard from "@/components/InfoCard.vue";
 import SubInfoCard from "@/components/SubInfoCard.vue";
 import ratings from "@/ratings.json";
 /* eslint-disable no-undef */
 export default {
   components: {
-    InfoCard,
     SubInfoCard,
   },
   data() {
